@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lookbook | Hair By Hayden</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg-linen:#FAF8F5;
+    --text-dark:#1E1713;
+    --text-muted:#5E534C;
+    --brass-accent:#CFA35E;
+    --white:#FFFFFF;
+    --mural-sand-2:#DFD5C6;
+    --mural-taupe-1:#CEBFAD;
+    --mural-taupe-2:#BCA995;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--mural-taupe-1);
+    color:var(--bg-linen);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* LOADER PRESERVED */
+#loader{
+    position:fixed;
+    inset:0;
+    background:var(--bg-linen);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .6s ease;
+}
+.loader-text{
+    font-family:'Playfair Display',serif;
+    font-size:.9rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-top:25px;
+    font-style:italic;
+    color:var(--text-dark);
+}
+.scissors-svg{width:110px;height:110px;}
+.blade-top{transform-origin:35px 50px;animation:snip-top .7s infinite ease-in-out;}
+.blade-bottom{transform-origin:35px 50px;animation:snip-bottom .7s infinite ease-in-out;}
+@keyframes snip-top{0%,100%{transform:rotate(0deg);}50%{transform:rotate(-12deg);}}
+@keyframes snip-bottom{0%,100%{transform:rotate(0deg);}50%{transform:rotate(12deg);}}
+.fade-out{opacity:0;pointer-events:none;}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:35px 6%;
+    background:var(--bg-linen);
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:1.7rem;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--text-dark);
+}
+
+.logo span{
+    display:block;
+    font-size:.7rem;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text-dark);
+    margin-left:40px;
+    font-size:.75rem;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:1.5px;
+    background:var(--text-dark);
+    transition:.35s;
+}
+
+nav a:hover::after,.active-link::after{width:100%;}
+
+.page-title-block{
+    padding:90px 8% 60px;
+    text-align:center;
+    background:var(--bg-linen);
+}
+
+.page-title-block h1{
+    font-family:'Playfair Display',serif;
+    font-size:3.2rem;
+    color:var(--text-dark);
+    margin-bottom:15px;
+}
+
+.page-title-block p{
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:3.5px;
+    font-size:.8rem;
+}
+
+/* LOOKBOOK */
+.lookbook-section{
+    position:relative;
+}
+
+.lookbook-decoration{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.decor-scissors{
+    position:absolute;
+    left:-120px;
+    top:140px;
+    width:420px;
+    opacity:.07;
+}
+
+.decor-comb{
+    position:absolute;
+    right:-120px;
+    bottom:140px;
+    width:380px;
+    height:18px;
+    background:rgba(30,23,19,.12);
+    border-radius:20px;
+    transform:rotate(25deg);
+}
+
+.decor-comb::after{
+    content:'';
+    position:absolute;
+    left:20px;
+    right:20px;
+    top:18px;
+    height:80px;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(30,23,19,.12) 0px,
+        rgba(30,23,19,.12) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+}
+
+.scattered-wall{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:0 auto;
+    padding:110px 6% 160px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:50px;
+}
+
+.lookbook-polaroid{
+    background:var(--bg-linen);
+    padding:18px 18px 54px;
+    height:380px;
+    position:relative;
+    box-shadow:
+        0 12px 24px rgba(0,0,0,.12),
+        0 28px 60px rgba(0,0,0,.18);
+    transition:all .45s ease;
+}
+
+.lookbook-polaroid:hover{
+    transform:scale(1.04) rotate(0deg)!important;
+    z-index:10;
+}
+
+.polaroid-img{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.polaroid-img img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.item-1{transform:rotate(-5deg) translateY(10px);}
+.item-2{transform:rotate(4deg) translateY(-15px);}
+.item-3{transform:rotate(-3deg) translateY(20px);}
+.item-4{transform:rotate(5deg) translateY(10px);}
+.item-5{transform:rotate(-4deg) translateY(-20px);}
+.item-6{transform:rotate(3deg) translateY(15px);}
+
+footer{
+    text-align:center;
+    padding:70px 20px;
+    font-size:.75rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--bg-linen);
+    background:#120E0C;
+}
+
+@media(max-width:900px){
+    .scattered-wall{
+        grid-template-columns:repeat(2,1fr);
+        gap:35px;
+        padding:80px 5%;
+    }
+    .decor-scissors,.decor-comb{opacity:.04;}
+}
+
+@media(max-width:600px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{margin:0 10px;}
+
+    .page-title-block h1{font-size:2rem;}
+
+    .scattered-wall{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .lookbook-polaroid{
+        height:340px;
+    }
+
+    .item-1,.item-2,.item-3,.item-4,.item-5,.item-6{
+        transform:rotate(0deg);
+    }
+
+    .decor-scissors,.decor-comb{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="loader">
+<svg class="scissors-svg" viewBox="0 0 100 100" fill="none" stroke="var(--text-dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<g class="blade-top">
+<circle cx="20" cy="65" r="7"/>
+<path d="M 27 62 L 35 50 L 85 46"/>
+</g>
+<g class="blade-bottom">
+<circle cx="20" cy="35" r="7"/>
+<path d="M 27 38 L 35 50 L 85 54"/>
+</g>
+<circle cx="35" cy="50" r="1.5" fill="var(--brass-accent)"/>
+</svg>
+<div class="loader-text">The Lookbook</div>
+</div>
+
+<header>
+<a href="index.html" class="logo">Hair by Hayden<span>Studio</span></a>
+<nav>
+<a href="index.html#home">The Experience</a>
+<a href="index.html#services">Services</a>
+<a href="lookbook.html" class="active-link">Lookbook</a>
+</nav>
+</header>
+
+<main>
+<div class="page-title-block">
+<h1>In The Chair</h1>
+<p>A Curation of Custom Blondes & Extensions</p>
+</div>
+
+<section class="lookbook-section">
+
+<div class="lookbook-decoration">
+<svg class="decor-scissors" viewBox="0 0 100 100" fill="none" stroke="#1E1713" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="20" cy="65" r="7"/>
+<path d="M 27 62 L 35 50 L 85 46"/>
+<circle cx="20" cy="35" r="7"/>
+<path d="M 27 38 L 35 50 L 85 54"/>
+</svg>
+<div class="decor-comb"></div>
+</div>
+
+<div class="scattered-wall">
+
+<div class="lookbook-polaroid item-1"><div class="polaroid-img"><img src="client_hair_6.png" alt=""></div></div>
+<div class="lookbook-polaroid item-2"><div class="polaroid-img"><img src="client_hair_7.png" alt=""></div></div>
+<div class="lookbook-polaroid item-3"><div class="polaroid-img"><img src="client_hair_8.png" alt=""></div></div>
+<div class="lookbook-polaroid item-4"><div class="polaroid-img"><img src="client_hair_9.png" alt=""></div></div>
+<div class="lookbook-polaroid item-5"><div class="polaroid-img"><img src="client_hair_10.png" alt=""></div></div>
+<div class="lookbook-polaroid item-6"><div class="polaroid-img"><img src="client_hair_11.png" alt=""></div></div>
+
+</div>
+</section>
+</main>
+
+<footer>
+<p>&copy; <span id="copyYear"></span> Hair By Hayden. Built with love.</p>
+</footer>
+
+<script>
+window.addEventListener('load',()=>{
+setTimeout(()=>{
+document.getElementById('loader').classList.add('fade-out');
+},1000);
+});
+document.getElementById('copyYear').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>

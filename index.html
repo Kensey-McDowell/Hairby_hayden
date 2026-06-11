@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair By Hayden | Luxury Studio</title>
+    <!-- Premium Editorial Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- BRAND TONE MATRICES (Ultra-Neutral Luxury Editorial) --- */
+        :root {
+            --bg-linen: #FAF8F5;          /* Crisp high-end warm alabaster */
+            --text-dark: #1E1713;         /* Luxe deep espresso onyx / Dark Brown for Scissors */
+            --text-muted: #5E534C;        /* Soft warm taupe charcoal */
+            --brass-accent: #CFA35E;      /* Brushed champagne gold */
+            --white: #FFFFFF;
+
+            /* Luxury Neutral Mountain Tones */
+            --mural-sand-1: #F5F1EB;      /* Pale champagne sand */
+            --mural-sand-2: #DFD5C6;      /* Muted beige sand */
+            --mural-taupe-1: #CEBFAD;     /* Soft warm taupe */
+            --mural-taupe-2: #BCA995;     /* Medium desert taupe */
+            --mural-taupe-3: #A6927E;     /* Grounding rich taupe */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-linen); 
+            color: var(--text-dark);
+            overflow-x: hidden; 
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- VINTAGE LOADING MASK --- */
+        #loader {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-linen);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+        }
+
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-top: 25px;
+            font-weight: 500;
+        }
+
+        .scissors-svg{width:110px;height:110px;}
+        .blade-top{transform-origin:35px 50px;animation:snip-top .7s infinite ease-in-out;}
+        .blade-bottom{transform-origin:35px 50px;animation:snip-bottom .7s infinite ease-in-out;}
+
+        @keyframes snip-top {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-12deg); }
+        }
+
+        @keyframes snip-bottom {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(12deg); }
+        }
+
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* --- PRECISE SCISSORS DIVIDER LINES (CRISP, NO BLURS) --- */
+        .hair-separator {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .sep-to-about { background-color: var(--mural-taupe-2); }
+        .sep-to-services { background-color: #ECE7E1; }
+        .sep-to-lookbook { background-color: var(--text-dark); }
+
+        .hair-strand {
+            width: 100%;
+            height: 0;
+            border-bottom: 1.5px dashed rgba(30, 23, 19, 0.4); 
+        }
+
+        .cutting-scissors {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cut-forward {
+            animation: cut-across-forward 14s infinite linear;
+        }
+
+        .cut-backward {
+            animation: cut-across-backward 14s infinite linear;
+        }
+
+        .mini-blade-top {
+            transform-origin: 16px 20px;
+            animation: mini-snip-top 0.4s infinite ease-in-out;
+        }
+        .mini-blade-bottom {
+            transform-origin: 16px 20px;
+            animation: mini-snip-bottom 0.4s infinite ease-in-out;
+        }
+
+        @keyframes cut-across-forward {
+            0% { left: -40px; transform: translateY(-50%) scaleX(1); opacity: 0; }
+            2% { opacity: 1; }
+            98% { opacity: 1; }
+            100% { left: 100%; transform: translateY(-50%) scaleX(1); opacity: 0; }
+        }
+
+        @keyframes cut-across-backward {
+            0% { right: -40px; transform: translateY(-50%) scaleX(-1); opacity: 0; }
+            2% { opacity: 1; }
+            98% { opacity: 1; }
+            100% { right: 100%; transform: translateY(-50%) scaleX(-1); opacity: 0; }
+        }
+
+        @keyframes mini-snip-top {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-12deg); }
+        }
+        @keyframes mini-snip-bottom {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(12deg); }
+        }
+
+        /* --- FINE-ART POLAROID CONTAINER & STRICT CONSTRAINT RULES --- */
+        .polaroid {
+            background: var(--white);
+            padding: 18px 18px 54px 18px;
+            box-shadow: 0 20px 40px rgba(30, 23, 19, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            display: inline-block;
+            transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease;
+            width: 100%;
+        }
+        
+        .polaroid-img {
+            width: 100%;
+            height: 360px; 
+            background-color: var(--mural-sand-2); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .polaroid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* --- LUXURY MENU BAR & LOGO --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px 6%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+        
+        .logo span {
+            font-size: 0.7rem;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 40px;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0; width: 0; height: 1.5px;
+            background-color: var(--text-dark);
+            transition: width 0.35s ease;
+        }
+
+        nav a:hover::after { width: 100%; }
+        nav a:hover { color: var(--text-muted); }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 16px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 150;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        /* --- GLOBAL LAYOUT BASIS --- */
+        section {
+            padding: 140px 8%;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            margin-bottom: 70px;
+            text-align: center;
+            color: var(--text-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 44px;
+            border: 1.5px solid var(--text-dark);
+            color: var(--text-dark);
+            background-color: transparent;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--text-dark);
+            color: var(--bg-linen);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        /* --- LUXURY HIGH-FASHION EDITORIAL HERO (NO BOX BACKGROUND) --- */
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding-top: 140px;
+            gap: 60px;
+            background-color: var(--bg-linen);
+            overflow: hidden;
+        }
+
+        .hero-mountain-mural {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+        }
+
+        /* Refined Text Block - White background fully eliminated to float elegantly */
+        .hero-text { 
+            flex: 1;
+            max-width: 530px; 
+            background: transparent; 
+            padding: 20px 0 20px 40px; /* Shifted padding into luxurious left margin indent */
+            border-left: 2px solid rgba(30, 23, 19, 0.15); /* Sleek editorial vertical margin accent */
+            box-shadow: none;
+            border-radius: 0;
+        }
+        
+        .tagline {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+            font-weight: 600;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+        
+        .hero-text h1 em { 
+            font-style: italic; 
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 45px;
+            font-weight: 400;
+            max-width: 460px;
+        }
+
+        .hero-editorial-images {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            height: 68vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            max-width: 500px;
+        }
+
+        .portrait-main {
+            width: 85%;
+            height: 100%;
+            background: var(--mural-sand-1);
+            box-shadow: 0 30px 60px rgba(30, 23, 19, 0.05);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .portrait-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .portrait-detail {
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 52%;
+            height: 36vh;
+            background: var(--mural-taupe-1);
+            border: 5px solid var(--white);
+            box-shadow: 0 30px 60px rgba(30, 23, 19, 0.08);
+            z-index: 2;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .portrait-detail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- SECOND SECTION: ABOUT PHILOSOPHY ON MEDIUM DESERT TAUPE --- */
+        .about {
+            background-color: var(--mural-sand-2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+        }
+
+        .about-image { 
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .about-image .polaroid { 
+            max-width: 380px; 
+            transform: rotate(-1.5deg); 
+        }
+
+        .about-text { 
+            flex: 1; 
+            max-width: 520px;
+        }
+
+        .about-text h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.6rem; 
+            font-weight: 400; 
+            margin-bottom: 25px; 
+            color: var(--text-dark);
+        }
+
+        .about-text p { 
+            color: var(--text-dark); 
+            margin-bottom: 22px; 
+            font-size: 1rem; 
+        }
+
+        /* --- THIRD SECTION: SERVICES MENU ON MUTED BISCUIT SAND --- */
+        .services {
+            background-color: #ECE7E1;
+        }
+
+        .services-list { 
+            max-width: 850px; 
+            margin: 0 auto; 
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 40px 10px;
+            border-bottom: 1px solid rgba(30, 23, 19, 0.12);
+        }
+
+        .service-name { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.4rem; 
+            font-weight: 600;
+            color: var(--text-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .service-name span {
+            display: block; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 0.85rem;
+            color: var(--text-muted); 
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+        .service-price { 
+            font-weight: 500; 
+            font-size: 1.15rem; 
+            color: var(--text-dark);
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        /* --- LAST SECTION: LOOKBOOK ON HIGH-CONTRAST ESPRESSO ONYX --- */
+        .lookbook {
+            background-color: var(--mural-taupe-2); 
+        }
+
+        .lookbook .section-title {
+            color: var(--bg-linen);
+        }
+
+        .lookbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+            margin-top: 20px;
+            justify-items: center;
+            width: 100%;
+        }
+
+        .lookbook-grid .polaroid {
+            max-width: 310px;
+            background: var(--bg-linen);
+        }
+
+        .lookbook-grid .polaroid-img {
+            height: 300px; 
+        }
+
+        .lookbook-grid .polaroid:nth-child(even) { transform: rotate(1.5deg) translateY(12px); }
+        .lookbook-grid .polaroid:nth-child(odd) { transform: rotate(-1.5deg); }
+        
+        .lookbook-grid .polaroid:hover { 
+            transform: scale(1.04) rotate(0deg) translateY(0); 
+            z-index: 10; 
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- LUXE STANDALONE FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 70px 20px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--bg-linen);
+            background-color: var(--mural-taupe-3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ==========================================================================
+           RESPONSIVE VIEWPORT RULES
+           ========================================================================== */
+        @media (max-width: 1100px) {
+            .hero-text h1 { font-size: 3.2rem; }
+            .hero-content-wrapper { gap: 40px; }
+            section { padding: 110px 6%; }
+        }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: flex; }
+
+            nav {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 80%; max-width: 320px; height: 100vh;
+                background-color: var(--bg-linen);
+                box-shadow: -15px 0 40px rgba(30, 23, 19, 0.08);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                z-index: 140;
+            }
+
+            nav.active { right: 0; }
+            nav a { margin: 24px 0; font-size: 1rem; margin-left: 0; letter-spacing: 3px; }
+
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+            .hero-content-wrapper {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            /* On small screens, use a delicate linen veil overlay backdrop so typography pops beautifully against lines */
+            .hero-text { 
+                max-width: 100%; 
+                padding: 40px 30px; 
+                border-left: none;
+                border-top: 1px solid rgba(30, 23, 19, 0.15);
+                border-bottom: 1px solid rgba(30, 23, 19, 0.15);
+                background: rgba(250, 248, 245, 0.85);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+            }
+            .hero-editorial-images {
+                width: 100%; height: 48vh;
+                margin-top: 30px; justify-content: center;
+            }
+            .portrait-main { width: 85%; }
+            .portrait-detail { bottom: -20px; left: 5%; width: 45%; height: 22vh; }
+
+            .about { flex-direction: column-reverse; gap: 50px; }
+            .about-text, .about-image { width: 100%; max-width: 100%; }
+            .about-text h2 { font-size: 2.1rem; }
+
+            .service-item { flex-direction: column; gap: 10px; }
+            .service-price { align-self: flex-start; }
+            .section-title { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 25px 6%; }
+            .logo { font-size: 1.35rem; }
+            .hero-text h1 { font-size: 2.3rem; }
+            .section-title { font-size: 1.7rem; }
+            .about-text h2 { font-size: 1.7rem; }
+            .service-name { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <svg class="scissors-svg" viewBox="0 0 100 100" fill="none" stroke="var(--text-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <g class="blade-top">
+                <circle cx="20" cy="65" r="7" />
+                <path d="M 27 62 L 35 50 L 85 46" />
+            </g>
+            <g class="blade-bottom">
+                <circle cx="20" cy="35" r="7" />
+                <path d="M 27 38 L 35 50 L 85 54" />
+            </g>
+            <circle cx="35" cy="50" r="1.5" fill="var(--brass-accent)" stroke="var(--text-dark)" stroke-width="0.5" />
+        </svg>
+        <div class="loader-text">Hair By Hayden</div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header>
+        <div class="logo">
+            Hair by Hayden
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
+            <a href="/experience.html">The Experience</a>
+            <a href="#services">Services</a>
+            <a href="/lookbook.html">Lookbook</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- FIRST SECTION: HERO ON LINEN CREAM BACKDROP -->
+        <section class="hero" id="home">
+            <svg class="hero-mountain-mural" viewBox="0 0 1440 800" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Distant Pale Champagne Peak -->
+                <path d="M0 430 L160 360 L400 410 L660 300 L900 370 L1160 280 L1440 350 L1440 800 L0 800 Z" fill="var(--mural-sand-1)"/>
+                <!-- Mid Rolling Ridge Beige -->
+                <path d="M0 500 L240 430 L520 490 L800 390 L1080 470 L1440 380 L1440 800 L0 800 Z" fill="var(--mural-sand-2)"/>
+                <!-- Soft Warm Taupe Layer -->
+                <path d="M0 580 L360 490 L700 560 L1060 460 L1440 540 L1440 800 L0 800 Z" fill="var(--mural-taupe-1)"/>
+                <!-- Mid Desert Taupe Layer -->
+                <path d="M0 670 L470 590 L940 650 L1440 570 L1440 800 L0 800 Z" fill="var(--mural-taupe-2)"/>
+                <!-- Foreground Grounding Rich Taupe Ridge -->
+                <path d="M0 750 L600 680 L1120 730 L1440 660 L1440 800 L0 800 Z" fill="var(--mural-taupe-3)"/>
+            </svg>
+
+            <div class="hero-content-wrapper">
+                <!-- Open Editorial Design Layout (The rigid white box background container has been beautifully dropped) -->
+                <div class="hero-text">
+                    <div class="tagline">Dedicated to the Artistry of Custom Cuts & Multi-Dimensional Color Always</div>
+                    <h1>Southern roots, <em>luxury</em> style.</h1>
+                    <p>An upscale boutique hair experience in the heart of Tennessee. Merging timeless Southern warmth with modern, luxury styling tailored exactly to you.</p>
+                    <a href="#services" class="cta-btn">View Menu</a>
+                </div>
+                
+                <div class="hero-editorial-images">
+                    <div class="portrait-main">
+                        <img src="Meet_Hayden.png" alt="Hayden Portrait Main">
+                    </div>
+                    <div class="portrait-detail">
+                        <img src="hair_brushing.png" alt="Hair Styling Detail View">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARATOR LINE 1 (Sharp transition into the Medium Desert Taupe Section) -->
+        <div class="hair-separator sep-to-about">
+            <div class="hair-strand"></div>
+            <div class="cutting-scissors cut-forward">
+                <svg viewBox="0 0 40 40" fill="none" stroke="var(--text-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <g class="mini-blade-top">
+                        <circle cx="8" cy="27" r="4" />
+                        <path d="M 11 24 L 16 20 L 36 17" />
+                    </g>
+                    <g class="mini-blade-bottom">
+                        <circle cx="8" cy="13" r="4" />
+                        <path d="M 11 16 L 16 20 L 36 23" />
+                    </g>
+                    <circle cx="16" cy="20" r="1" fill="var(--brass-accent)" stroke="var(--text-dark)" stroke-width="0.5" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- SECOND SECTION: PHILOSOPHY ON MEDIUM DESERT TAUPE -->
+        <section class="about" id="about">
+            <div class="about-image">
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="client_hair_1.png" alt="Meet Hayden Studio Owner">
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>The Philosophy</h2>
+                <p>I believe great hair is born from evolution, not limitations. My vision behind the chair is defined by a commitment to perfecting every dimension of my craft—actively exploring new perspectives, expanding my skillset, and refining specialized techniques every single day.</p>
+                <p>Whether you are looking for structural precision cutting, seamlessly lived-in custom highlights, or a complete texture and color transformation, my goal is an uncompromised luxury experience carefully mapped to your individual style.</p>
+                <a href="https://hair-by-hayden.square.site/" class="cta-btn">Reserve a Chair</a>
+            </div>
+        </section>
+
+        <!-- SEPARATOR LINE 2 (Sharp transition into the Muted Biscuit Sand Section) -->
+        <div class="hair-separator sep-to-services">
+            <div class="hair-strand"></div>
+            <div class="cutting-scissors cut-backward">
+                <svg viewBox="0 0 40 40" fill="none" stroke="var(--text-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <g class="mini-blade-top">
+                        <circle cx="8" cy="27" r="4" />
+                        <path d="M 11 24 L 16 20 L 36 17" />
+                    </g>
+                    <g class="mini-blade-bottom">
+                        <circle cx="8" cy="13" r="4" />
+                        <path d="M 11 16 L 16 20 L 36 23" />
+                    </g>
+                    <circle cx="16" cy="20" r="1" fill="var(--brass-accent)" stroke="var(--text-dark)" stroke-width="0.5" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- THIRD SECTION: SERVICES MENU ON MUTED BISCUIT SAND -->
+        <section class="services" id="services">
+            <h2 class="section-title">Service menu</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-name">
+                        Cuts & Styles
+                        <span>Full custom blonding, balayage, or lived-in color + gloss & blowout</span>
+                    </div>
+                    <div class="service-price">$35+</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">
+                        Consultation
+                        <span>Premium installation for maximum length and volume. Consultation required.</span>
+                    </div>
+                    <div class="service-price">Varies</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">
+                        Signature Blonding
+                        <span>Root touch-up or overall toner refreshing to keep tone crisp between sessions</span>
+                    </div>
+                    <div class="service-price">$220+</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">
+                        Custom Color
+                        <span>Detailed structural cutting mapped to your face shape, includes style</span>
+                    </div>
+                    <div class="service-price">$90+</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">
+                        Extensions
+                        <span>Detailed structural cutting mapped to your face shape, includes style</span>
+                    </div>
+                    <div class="service-price">$200+</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">
+                        Add On Treatments
+                        <span>Detailed structural cutting mapped to your face shape, includes style</span>
+                    </div>
+                    <div class="service-price">$15+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARATOR LINE 3 (Sharp transition into the High-Contrast Charcoal Espresso Lookbook) -->
+        <div class="hair-separator sep-to-about">
+            <div class="hair-strand"></div>
+            <div class="cutting-scissors cut-forward">
+                <svg viewBox="0 0 40 40" fill="none" stroke="var(--text-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <g class="mini-blade-top">
+                        <circle cx="8" cy="27" r="4" />
+                        <path d="M 11 24 L 16 20 L 36 17" />
+                    </g>
+                    <g class="mini-blade-bottom">
+                        <circle cx="8" cy="13" r="4" />
+                        <path d="M 11 16 L 16 20 L 36 23" />
+                    </g>
+                    <circle cx="16" cy="20" r="1" fill="var(--brass-accent)" stroke="var(--text-dark)" stroke-width="0.5" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- LAST SECTION: LOOKBOOK GRID ON CHARCOAL ESPRESSO ONYX -->
+        <section class="lookbook" id="lookbook">
+            <h2 class="section-title">In The Chair</h2>
+            <div class="lookbook-grid">
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="client_hair_2.png" alt="Brunette Balayage Profile">
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="client_hair_3.png" alt="Sun-Kissed Blend Look">
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="client_hair_5.png" alt="Volume Transformation Finish">
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="client_hair_4.png" alt="Honey Gold Highlights Styling">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hair By Hayden. Built with love.</p>
+    </footer>
+
+    <script>
+        // Loading mask removal
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('fade-out');
+            }, 1400); 
+        });
+
+        // Mobile Nav Hamburger logic
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('#navMenu a');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
