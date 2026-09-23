@@ -14,16 +14,18 @@
     --text-muted:#5E534C;
     --brass-accent:#CFA35E;
     --white:#FFFFFF;
+    --mural-sand-1:#F5F1EB;
     --mural-sand-2:#DFD5C6;
     --mural-taupe-1:#CEBFAD;
     --mural-taupe-2:#BCA995;
+    --mural-taupe-3:#A6927E;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:var(--mural-taupe-1);
+    background:var(--mural-taupe-3);
     color:var(--bg-linen);
     line-height:1.65;
     overflow-x:hidden;
@@ -126,9 +128,38 @@ nav a:hover::after,.active-link::after{width:100%;}
     font-size:.8rem;
 }
 
-/* LOOKBOOK */
 .lookbook-section{
     position:relative;
+    overflow:hidden;
+    background-color:var(--mural-taupe-3);
+    background-image:
+        /* overall darkening wash */
+        linear-gradient(rgba(30,23,19,.16), rgba(30,23,19,.16)),
+        /* soft lit corner / shadowed corner */
+        radial-gradient(ellipse 950px 560px at 6% 0%, rgba(255,255,255,.1), transparent 60%),
+        radial-gradient(ellipse 950px 700px at 94% 100%, rgba(30,23,19,.32), transparent 60%),
+        /* fine horizontal grain — four overlapping scales, like real wood */
+        linear-gradient(180deg, rgba(255,255,255,.035) 50%, transparent 50%),
+        linear-gradient(180deg, rgba(255,255,255,.028) 50%, transparent 50%),
+        linear-gradient(180deg, transparent 50%, rgba(30,23,19,.045) 50%),
+        linear-gradient(180deg, transparent 50%, rgba(30,23,19,.04) 50%),
+        /* board seams */
+        linear-gradient(180deg, transparent 97%, rgba(30,23,19,.32) 97%),
+        linear-gradient(180deg, transparent 93%, rgba(245,241,235,.1) 93%),
+        /* base wood color, top to bottom */
+        linear-gradient(180deg, var(--mural-taupe-1) 0%, var(--mural-taupe-2) 45%, var(--mural-taupe-3) 100%);
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        100% 13px,
+        100% 29px,
+        100% 37px,
+        100% 53px,
+        100% 150px,
+        100% 150px,
+        100% 100%;
+    box-shadow: inset 0 18px 50px rgba(30,23,19,.3);
 }
 
 .lookbook-decoration{
@@ -136,43 +167,27 @@ nav a:hover::after,.active-link::after{width:100%;}
     inset:0;
     pointer-events:none;
     overflow:hidden;
+    z-index:1;
 }
 
 .decor-scissors{
     position:absolute;
-    left:-120px;
-    top:140px;
-    width:420px;
-    opacity:.07;
+    left:1%;
+    top:90px;
+    width:600px;
+    transform:rotate(35deg);
+    filter:drop-shadow(0 12px 14px rgba(30,23,19,.35));
 }
 
 .decor-comb{
     position:absolute;
-    right:-120px;
-    bottom:140px;
-    width:380px;
-    height:18px;
-    background:rgba(30,23,19,.12);
-    border-radius:20px;
-    transform:rotate(25deg);
+    right:-3%;
+    bottom:60px;
+    width:600px;
+    transform:rotate(45deg);
+    filter:drop-shadow(0 12px 14px rgba(30,23,19,.32));
 }
-
-.decor-comb::after{
-    content:'';
-    position:absolute;
-    left:20px;
-    right:20px;
-    top:18px;
-    height:80px;
-    background:
-    repeating-linear-gradient(
-        90deg,
-        rgba(30,23,19,.12) 0px,
-        rgba(30,23,19,.12) 2px,
-        transparent 2px,
-        transparent 10px
-    );
-}
+.decor-comb svg{ width:100%; height:auto; display:block; }
 
 .scattered-wall{
     position:relative;
@@ -191,8 +206,8 @@ nav a:hover::after,.active-link::after{width:100%;}
     height:380px;
     position:relative;
     box-shadow:
-        0 12px 24px rgba(0,0,0,.12),
-        0 28px 60px rgba(0,0,0,.18);
+        0 12px 24px rgba(30,23,19,.18),
+        0 28px 60px rgba(30,23,19,.25);
     transition:all .45s ease;
 }
 
@@ -229,8 +244,10 @@ footer{
     font-size:.75rem;
     letter-spacing:3px;
     text-transform:uppercase;
+    font-weight:500;
     color:var(--bg-linen);
-    background:#120E0C;
+    background-color:var(--mural-taupe-3);
+    border-top:1px solid rgba(255,255,255,.05);
 }
 
 @media(max-width:900px){
@@ -239,7 +256,9 @@ footer{
         gap:35px;
         padding:80px 5%;
     }
-    .decor-scissors,.decor-comb{opacity:.04;}
+    .decor-scissors,.decor-comb{ width:380px; }
+    .decor-scissors{ left:1%; top:70px; }
+    .decor-comb{ right:1%; bottom:60px; }
 }
 
 @media(max-width:600px){
@@ -289,7 +308,7 @@ footer{
 </div>
 
 <header>
-<a href="index.html" class="logo">Hair by Hayden<span>Studio</span></a>
+<a href="index.html" class="logo">Hair by Hayden</a>
 <nav>
 <a href="index.html#home">The Experience</a>
 <a href="index.html#services">Services</a>
@@ -300,19 +319,71 @@ footer{
 <main>
 <div class="page-title-block">
 <h1>In The Chair</h1>
-<p>A Curation of Custom Blondes & Extensions</p>
+<p>A Curation of Dimensional Tones, Glossy Finishes & Effortless Everyday Hair</p>
 </div>
 
 <section class="lookbook-section">
 
 <div class="lookbook-decoration">
-<svg class="decor-scissors" viewBox="0 0 100 100" fill="none" stroke="#1E1713" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="20" cy="65" r="7"/>
-<path d="M 27 62 L 35 50 L 85 46"/>
-<circle cx="20" cy="35" r="7"/>
-<path d="M 27 38 L 35 50 L 85 54"/>
-</svg>
-<div class="decor-comb"></div>
+
+    <!-- scissors — the site's own icon, resting open, fully on screen -->
+    <!-- viewBox is 100x100; everything below is drawn in that local 0-100 grid, then scaled up by the .decor-scissors width -->
+    <svg class="decor-scissors" viewBox="0 0 100 100" fill="none" stroke="#1E1713" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bottom blade's finger loop: a circle centered at (20,65) with radius 7 -->
+    <ellipse cx="10" cy="55" rx="9" ry="6"/>
+    <!-- bottom blade itself: starts at the edge of that loop (27,62), bends at the pivot point (35,50), then runs out to the tip (85,46) -->
+    <path d="M 20 55 L 35 50 L 85 36"/>
+    <!-- top blade's finger loop: a circle centered at (20,35) with radius 7 -->
+    <ellipse cx="14" cy="35" rx="9" ry="6"/>
+    <!-- top blade itself: mirrors the bottom one — loop edge (27,38) to pivot (35,50) to tip (85,54) -->
+    <path d="M 20 40 L 35 50 L 85 66"/>
+    <!-- the brass rivet/pivot screw where the two blades cross, sitting right on top of (35,50) -->
+    <circle cx="35" cy="50" r="1.5" fill="#CFA35E"/>
+    </svg>
+
+    <!-- rat-tail comb — wide tooth section + long tapering handle, carbon black with a brass collar -->
+    <!-- viewBox is 300x64, drawn left-to-right: teeth on the left, brass collar in the middle, tapering tail handle on the right -->
+    <div class="decor-comb">
+        <svg viewBox="0 0 300 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- carbonGrad: the dark gradient used for every black part of the comb, lightest at the top, darkest at the bottom -->
+                <linearGradient id="carbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3C342C"/>
+                    <stop offset="55%" stop-color="#211B16"/>
+                    <stop offset="100%" stop-color="#0C0A08"/>
+                </linearGradient>
+            </defs>
+
+            <!-- the comb's spine: a curved bar running along the top of the tooth section, from x=0 to x=100 -->
+            <path d="M0,8 C30,-3 70,-2 100,6 L101,18 C70,10 30,9 0,20 Z" fill="url(#carbonGrad)"/>
+
+            <!-- the teeth: 12 identical thin rounded bars, each 4.2 wide and 36 tall, spaced 8px apart starting at x=5 -->
+            <!-- to add/remove teeth, copy or delete one of these <rect> lines and shift the x values to re-space them -->
+            <g fill="url(#carbonGrad)">
+                <rect x="5"  y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="13" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="21" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="29" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="37" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="45" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="53" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="61" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="69" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="77" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="85" y="18" width="4.2" height="36" rx="1.6"/>
+                <rect x="93" y="18" width="4.2" height="36" rx="1.6"/>
+            </g>
+
+            <!-- brass collar: the small gold band where the tooth section meets the tail handle, around x=99-104 -->
+            <rect x="99" y="3" width="5" height="16" rx="2" fill="#CFA35E"/>
+
+            <!-- the tail handle: one long tapering shape from the collar (x=104) out to a fine point at the tip (x=292) -->
+            <path d="M104,4 C150,-7 200,1 240,13 C262,20 278,26 292,31 L291,35 C277,30 261,24 238,18 C199,7 150,2 105,15 Z" fill="url(#carbonGrad)"/>
+            <!-- the very tip of the tail, a tiny dot to round it off cleanly -->
+            <circle cx="296" cy="32.5" r="1.6" fill="#211B16"/>
+        </svg>
+    </div>
+
 </div>
 
 <div class="scattered-wall">
