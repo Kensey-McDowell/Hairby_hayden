@@ -637,7 +637,6 @@ body::after{
 .book{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;padding:clamp(100px,12vw,160px) var(--gutter);background:var(--espresso);color:var(--cream);overflow:hidden}
 .book-video{position:absolute;inset:0;z-index:0}
 .book-video video{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:.38;filter:sepia(.55) saturate(.8) contrast(1.05)}
-@media (min-aspect-ratio:1/1){.book-video video{transform:scale(2.25)}} /* hair.mp4 is a vertical clip letterboxed in 16:9: zoom past the baked-in bars */
 .book-video::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(32,21,14,.35) 0%, rgba(32,21,14,.92) 75%)}
 .book-inner{position:relative;z-index:1;max-width:980px}
 .book .label{color:var(--brass-lt);margin-bottom:34px}
@@ -1252,20 +1251,23 @@ body::after{
     </h2>
     <p class="lede" data-reveal style="--d:.15s">A peek at the work in motion, from the first section to the final flip.</p>
 
+    <!-- VIDEOS: the site plays the "-web.mp4" copies: cropped to the vertical picture, no audio, about 10x
+         smaller so they start fast on phones. poster= is the still shown until the video loads.
+         To use a new clip, export it vertically at about 720px tall and keep the file small (1-2 MB). -->
     <div class="reel-grid">
       <figure class="reel" data-reveal>
         <!-- VIDEO: Behind the Chair, left arch. Change data-src (not src; it loads only when scrolled to). -->
-        <div class="reel-media arch"><video muted loop playsinline preload="none" data-src="hair-2.mp4" aria-label="Styling in progress"></video></div>
+        <div class="reel-media arch"><video muted loop playsinline preload="none" poster="hair-2-poster.jpg" data-src="hair-2-web.mp4" aria-label="Styling in progress"></video></div>
         <figcaption class="script">Snip.</figcaption>
       </figure>
       <figure class="reel" data-reveal style="--d:.12s">
         <!-- VIDEO: Behind the Chair, middle arch. Change data-src. -->
-        <div class="reel-media arch"><video muted loop playsinline preload="none" data-src="hair-3.mp4" aria-label="Color and finish in progress"></video></div>
+        <div class="reel-media arch"><video muted loop playsinline preload="none" poster="hair-3-poster.jpg" data-src="hair-3-web.mp4" aria-label="Color and finish in progress"></video></div>
         <figcaption class="script">Style.</figcaption>
       </figure>
       <figure class="reel" data-reveal style="--d:.24s">
         <!-- VIDEO: Behind the Chair, right arch. Change data-src. -->
-        <div class="reel-media arch"><video muted loop playsinline preload="none" data-src="hair-4.mp4" aria-label="The final reveal"></video></div>
+        <div class="reel-media arch"><video muted loop playsinline preload="none" poster="hair-4-poster.jpg" data-src="hair-4-web.mp4" aria-label="The final reveal"></video></div>
         <figcaption class="script">Shine.</figcaption>
       </figure>
     </div>
@@ -1359,10 +1361,8 @@ body::after{
   <!-- ============ BOOK ============ -->
   <section class="book on-dark" id="book" data-dark>
     <div class="book-video" aria-hidden="true">
-      <!-- VIDEO: Background behind "Come on in & sit a spell". Change data-src.
-           hair.mp4 has black bars baked in, so the CSS zooms it (search ".book-video video"); delete that
-           @media line if you swap in a clip without bars. -->
-      <video muted loop playsinline preload="none" data-src="hair.mp4"></video>
+      <!-- VIDEO: Background behind "Come on in & sit a spell". Change data-src. -->
+      <video muted loop playsinline preload="none" poster="hair-poster.jpg" data-src="hair-web.mp4"></video>
     </div>
     <div class="book-inner">
       <p class="label center" data-reveal>Reservations</p>
@@ -1590,20 +1590,35 @@ body::after{
   /* ------------------------------------------------------------------
      6. Lazy reels: load and play only while on screen
      ------------------------------------------------------------------ */
+  // Phones are strict about autoplay: the video must be muted *as a property* (not only the
+  // attribute), and iPhones in Low Power Mode or Android data saver refuse autoplay outright.
+  // When that happens the poster still shows, and the next tap anywhere starts the videos.
   const vids = $$('video[data-src]');
+  const blocked = new Set();
+  const tryPlay = v => {
+    if (reduce) return;
+    v.muted = true; v.defaultMuted = true; v.playsInline = true;
+    const pr = v.play();
+    if (pr) pr.then(() => blocked.delete(v)).catch(err => { if (err && err.name === 'NotAllowedError') blocked.add(v); });
+  };
+  const wakeBlocked = () => blocked.forEach(v => { if (v.dataset.onscreen === '1') tryPlay(v); });
+  ['touchend', 'click'].forEach(t => addEventListener(t, wakeBlocked, { passive: true }));
   if ('IntersectionObserver' in window) {
     const vio = new IntersectionObserver(entries => {
       entries.forEach(en => {
         const v = en.target;
+        v.dataset.onscreen = en.isIntersecting ? '1' : '0';
         if (en.isIntersecting) {
-          if (!v.getAttribute('src')) { v.src = v.dataset.src; }
-          if (!reduce) v.play().catch(() => {});
+          if (!v.getAttribute('src')) { v.src = v.dataset.src; v.load(); }
+          tryPlay(v);
         } else {
           v.pause();
         }
       });
-    }, { rootMargin: '150px 0px' });
+    }, { rootMargin: '150px 150px' });
     vids.forEach(v => vio.observe(v));
+  } else {
+    vids.forEach(v => { v.src = v.dataset.src; v.dataset.onscreen = '1'; tryPlay(v); });
   }
 
   /* ------------------------------------------------------------------
