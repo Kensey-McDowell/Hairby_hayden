@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lookbook | Hair by Hayden, Murfreesboro TN</title>
+<meta name="description" content="The Hair by Hayden lookbook: dimensional blondes, rich brunettes and copper and red transformations from Hayden's chair in Murfreesboro, Tennessee.">
+<meta name="theme-color" content="#20150E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%82%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.curtain{display:none!important}</style></noscript>
+
+<style>
+/* =====================================================================
+   HAIR BY HAYDEN: THE LOOKBOOK
+   Same design language as the homepage (index2.html): magnolia cream,
+   espresso, bourbon and brass, parlor arches and a pair of shears.
+   ===================================================================== */
+:root{
+  --cream:#F4ECDF; --cream-2:#EDE2D1; --linen:#FAF6EF;
+  --espresso:#20150E; --espresso-2:#2E2018;
+  --bourbon:#8B5A34; --brass:#B08A4F; --brass-lt:#D9BD8A;
+  --ink:#20150E; --muted:#6E5E51; --line:rgba(32,21,14,.14);
+  --serif:'Cormorant Garamond','Times New Roman',serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --script:'Pinyon Script','Snell Roundhand',cursive;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.76,0,.24,1);
+  --gutter:clamp(16px,5vw,80px);
+  --nav-h:84px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}
+::selection{background:var(--brass);color:var(--linen)}
+:focus-visible{outline:1.5px solid var(--brass);outline-offset:4px}
+body::after{
+  content:'';position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.skip{position:absolute;left:-999px;top:12px;z-index:3000;background:var(--espresso);color:var(--cream);padding:10px 18px}
+.skip:focus{left:12px}
+
+/* ---------- Type ---------- */
+.label{display:inline-flex;align-items:center;gap:14px;font:500 .7rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--bourbon)}
+.label .num{font:italic 400 1.15rem/1 var(--serif);letter-spacing:0;color:var(--brass)}
+.label::after{content:'';width:44px;height:1px;background:currentColor;opacity:.45}
+.display{font-family:var(--serif);font-weight:300;font-size:clamp(2.7rem,6.2vw,5.8rem);line-height:.98;letter-spacing:-.015em}
+.display em{font-style:italic;font-weight:400;color:var(--bourbon)}
+.script{font-family:var(--script);font-weight:400}
+.lede{font-size:1.06rem;color:var(--muted);max-width:34rem}
+.line{display:block;overflow:hidden;padding:0 .12em .1em 0;margin-bottom:-.1em}
+.line > span{display:inline-block}
+
+/* ---------- Buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:14px;padding:18px 34px;border-radius:999px;overflow:hidden;isolation:isolate;
+  font:500 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;border:1px solid var(--espresso);
+  transition:color .5s var(--ease-out),border-color .5s,transform .6s var(--ease-out)}
+.btn::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--espresso);transform:translateY(101%);transition:transform .6s var(--ease-out)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn:hover,.btn:focus-visible{color:var(--cream)}
+.btn-solid{background:var(--espresso);color:var(--cream)}
+.btn-solid::before{background:var(--bourbon)}
+.btn .arrow{width:18px;height:10px;transition:transform .5s var(--ease-out)}
+.btn:hover .arrow{transform:translateX(5px)}
+
+/* ---------- Shears (same drawing as the homepage) ---------- */
+.scissors{display:inline-block;color:var(--espresso);line-height:0}
+.scissors-svg{width:100%;height:auto;overflow:visible}
+.scissors-svg .blade{transform-box:view-box;transform-origin:53px 30px;transition:transform .45s var(--ease-out)}
+.scissors-svg .blade-a{transform:rotate(calc(var(--open,7) * 1deg))}
+.scissors-svg .blade-b{transform:rotate(calc(var(--open,7) * -1deg))}
+.scissors-svg .ring{fill:none;stroke:currentColor;stroke-width:3.2}
+.scissors-svg .arm{fill:none;stroke:currentColor;stroke-width:3.4;stroke-linecap:round}
+.scissors-svg .edge{fill:url(#brassGrad);stroke:currentColor;stroke-width:.7;stroke-linejoin:round}
+.scissors-svg .pivot{fill:var(--brass-lt);stroke:currentColor;stroke-width:1.2}
+.snipping .scissors-svg .blade-a,.scissors.snipping .blade-a{animation:snipA .42s var(--ease-io) infinite}
+.snipping .scissors-svg .blade-b,.scissors.snipping .blade-b{animation:snipB .42s var(--ease-io) infinite}
+@keyframes snipA{0%,100%{transform:rotate(20deg)}50%{transform:rotate(0deg)}}
+@keyframes snipB{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(0deg)}}
+
+/* ---------- Curtain (page intro + page-leave transition) ---------- */
+.curtain{position:fixed;inset:0;z-index:1500;pointer-events:all}
+.curtain.done{visibility:hidden;pointer-events:none}
+.curtain-half{position:absolute;left:0;width:100%;height:50.2%;background:var(--espresso);color:var(--cream);display:flex;justify-content:center;transition:transform 1.15s var(--ease-io)}
+.curtain-half::before{content:'';position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(90deg,rgba(217,189,138,.05) 0 1px,transparent 1px 26px)}
+.curtain-half.top{top:0;align-items:flex-end;padding-bottom:34px}
+.curtain-half.bottom{bottom:0;align-items:flex-start;padding-top:34px}
+.curtain-word{font-family:var(--script);font-size:clamp(2.8rem,7vw,5.4rem);line-height:1;transition:transform 1.15s var(--ease-io),opacity .8s}
+.curtain-sub{font:400 .68rem/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--brass-lt);transition:transform 1.15s var(--ease-io),opacity .8s}
+.curtain-seam{position:absolute;top:50%;left:0;width:100%;height:1px;margin-top:-.5px;background:repeating-linear-gradient(90deg,var(--brass) 0 9px,transparent 9px 16px)}
+.curtain-shears{position:absolute;top:50%;left:0;width:92px;color:var(--cream);transform:translate(-110%,-50%)}
+.curtain.cutting .curtain-shears{animation:shearsRun var(--run,1.1s) var(--ease-io) forwards}
+.curtain.cutting .curtain-seam{animation:seamCut var(--run,1.1s) var(--ease-io) forwards}
+@keyframes shearsRun{to{transform:translate(calc(100vw + 10%),-50%)}}
+@keyframes seamCut{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
+.curtain.open .curtain-half.top{transform:translateY(-101%)}
+.curtain.open .curtain-half.bottom{transform:translateY(101%)}
+.curtain.open .curtain-word{transform:translateY(-40px);opacity:0}
+.curtain.open .curtain-sub{transform:translateY(40px);opacity:0}
+.curtain.open .curtain-seam{opacity:0}
+.curtain.leaving .curtain-half{transition-duration:.8s}
+.curtain.leaving .curtain-seam,.curtain.leaving .curtain-shears{opacity:0}
+
+/* ---------- Progress seam ---------- */
+.thread{position:fixed;top:0;left:0;width:100%;height:14px;z-index:120;pointer-events:none}
+.thread::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,rgba(139,90,52,.28) 0 6px,transparent 6px 11px)}
+.thread-cut{position:absolute;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--bourbon),var(--brass));transform-origin:left;transform:scaleX(0)}
+.thread-shears{position:absolute;top:-8px;left:0;width:34px}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:110;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);
+  transition:transform .7s var(--ease-out),background-color .5s,box-shadow .5s,height .5s var(--ease-out)}
+.nav.scrolled{--nav-h:68px;background:rgba(244,236,223,.86);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 var(--line)}
+.nav.hide{transform:translateY(-105%)}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo .script{font-size:2rem;color:var(--espresso)}
+.logo small{font:500 .56rem/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--bourbon);margin:4px 0 0 4px}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,2.6vw,42px)}
+.nav-links a:not(.btn){position:relative;font:500 .7rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:8px 0}
+.nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--bourbon);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease-out)}
+.nav-links a:not(.btn):hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
+.nav-links a.active{color:var(--bourbon)}
+.nav .btn{padding:13px 24px}
+.menu-btn{display:none;align-items:center;gap:12px;font:500 .7rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:10px 0;position:relative;z-index:130}
+.menu-btn .bars{width:26px;height:10px;position:relative}
+.menu-btn .bars i{position:absolute;left:0;width:100%;height:1.5px;background:currentColor;transition:transform .6s var(--ease-out),top .6s var(--ease-out)}
+.menu-btn .bars i:first-child{top:0}
+.menu-btn .bars i:last-child{top:8.5px}
+.menu-open .menu-btn{color:var(--cream)}
+.menu-open .menu-btn .bars i:first-child{top:4px;transform:rotate(22deg)}
+.menu-open .menu-btn .bars i:last-child{top:4px;transform:rotate(-22deg)}
+.menu{position:fixed;inset:0;z-index:125;background:var(--espresso);color:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:100px var(--gutter) 40px;
+  clip-path:circle(0% at calc(100% - 48px) 42px);visibility:hidden;transition:clip-path 1s var(--ease-io),visibility 0s 1s}
+.menu-open .menu{clip-path:circle(150% at calc(100% - 48px) 42px);visibility:visible;transition:clip-path 1s var(--ease-io),visibility 0s}
+.menu ol{list-style:none;counter-reset:m}
+.menu li{overflow:hidden;border-bottom:1px solid rgba(244,236,223,.1)}
+.menu li a{display:flex;align-items:baseline;gap:18px;padding:14px 0;font:300 clamp(2.3rem,9vw,3.6rem)/1.05 var(--serif);transform:translateY(105%);transition:transform .9s var(--ease-out)}
+.menu li a::before{counter-increment:m;content:'0' counter(m);font:italic 400 1rem/1 var(--serif);color:var(--brass)}
+.menu-open .menu li a{transform:none}
+.menu-open .menu li:nth-child(1) a{transition-delay:.25s}
+.menu-open .menu li:nth-child(2) a{transition-delay:.31s}
+.menu-open .menu li:nth-child(3) a{transition-delay:.37s}
+.menu-open .menu li:nth-child(4) a{transition-delay:.43s}
+.menu-open .menu li:nth-child(5) a{transition-delay:.49s}
+.menu-open{overflow:hidden}
+.menu-open .nav{z-index:130;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;transform:none}
+.menu-open .logo .script{color:var(--cream)}
+.menu-open .logo small{color:var(--brass-lt)}
+
+/* ---------- Reveal system ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(46px);transition:opacity 1.2s var(--ease-out) var(--d,0s),transform 1.3s var(--ease-out) var(--d,0s)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal="lines"]{opacity:1;transform:none}
+.js [data-reveal="lines"] .line > span{transform:translateY(112%);transition:transform 1.3s var(--ease-out)}
+.js [data-reveal="lines"].in .line > span{transform:none}
+.js [data-reveal="lines"] .line:nth-child(2) > span{transition-delay:.1s}
+
+/* =====================================================================
+   HERO: a hand of photos that shuffles itself
+   ===================================================================== */
+.lk-hero{
+  position:relative;min-height:92vh;min-height:92svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(30px,5vw,80px);
+  padding:calc(var(--nav-h) + 40px) var(--gutter) 70px;overflow:hidden;
+  background:radial-gradient(80% 60% at 85% 20%,rgba(217,189,138,.28),transparent 60%),repeating-linear-gradient(90deg,rgba(139,90,52,.04) 0 1px,transparent 1px 24px),var(--cream);
+}
+.lk-hero .label{margin-bottom:30px}
+.lk-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3.8rem,10vw,10rem);line-height:.88;letter-spacing:-.025em;margin-bottom:34px}
+.lk-hero h1 em{font-style:italic;font-weight:400;color:var(--bourbon)}
+.lk-hero h1 .line:nth-child(2){padding-left:.8em}
+.js .lk-hero h1 .line > span{transform:translateY(112%);transition:transform 1.4s var(--ease-out)}
+.js .is-ready .lk-hero h1 .line > span{transform:none}
+.js .is-ready .lk-hero h1 .line:nth-child(2) > span{transition-delay:.15s}
+.js .lk-hero .label,.js .lk-hero .lede,.js .lk-stats{opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out)}
+.js .is-ready .lk-hero .label{opacity:1;transform:none;transition-delay:.1s}
+.js .is-ready .lk-hero .lede{opacity:1;transform:none;transition-delay:.55s}
+.js .is-ready .lk-stats{opacity:1;transform:none;transition-delay:.75s}
+.lk-stats{display:flex;gap:clamp(24px,4vw,56px);margin-top:44px;padding-top:28px;border-top:1px solid var(--line);max-width:34rem}
+.lk-stat b{display:block;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1;font:italic 400 clamp(2.2rem,3.4vw,3rem)/1 var(--serif);color:var(--bourbon);margin-bottom:8px}
+.lk-stat span{font:500 .62rem/1.4 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+
+.fan{position:relative;height:min(64vh,580px);--spread:1}
+.fan-card{
+  position:absolute;left:50%;top:50%;width:min(300px,58%);aspect-ratio:3/4;padding:10px;background:var(--linen);
+  box-shadow:0 30px 60px -28px rgba(32,21,14,.5);cursor:pointer;
+  transform:translate(-50%,-50%) translate(calc(var(--x,0%) * var(--spread)),var(--y,0%)) rotate(calc(var(--r,0deg) * var(--spread))) scale(var(--s,1));
+  transition:transform 1s var(--ease-out),box-shadow .6s;
+}
+.fan-card img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.fan-card::after{content:attr(data-name);position:absolute;left:10px;right:10px;bottom:-34px;text-align:center;font:italic 400 1.15rem/1 var(--serif);color:var(--bourbon);opacity:0;transition:opacity .5s}
+.fan-card.front::after{opacity:1}
+.fan-card.thrown{transform:translate(-50%,-50%) translate(95%,-14%) rotate(22deg) scale(1.02);transition-duration:.55s;transition-timing-function:var(--ease-io)}
+.fan:hover{--spread:1.45}
+.js .fan{opacity:0;transform:translateY(40px) scale(.96);transition:opacity 1.2s var(--ease-out) .35s,transform 1.4s var(--ease-out) .35s}
+.js .is-ready .fan{opacity:1;transform:none}
+.fan-hint{position:absolute;left:0;right:0;bottom:-10px;text-align:center;font:500 .6rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* =====================================================================
+   TOOLBAR: color-family filters + view switch (sticky)
+   ===================================================================== */
+.lk-bar{
+  position:sticky;top:0;z-index:90;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px var(--gutter);
+  background:rgba(244,236,223,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  transition:top .7s var(--ease-out);
+}
+.seg{position:relative;display:flex;gap:4px;padding:4px;border-radius:999px;background:rgba(32,21,14,.05)}
+.seg-pill{position:absolute;top:4px;bottom:4px;left:0;width:0;border-radius:999px;background:var(--espresso);transition:left .6s var(--ease-out),width .6s var(--ease-out)}
+.seg button{position:relative;z-index:1;padding:11px 18px;border-radius:999px;white-space:nowrap;font:500 .66rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:color .45s}
+.seg button[aria-pressed="true"]{color:var(--cream)}
+.seg button sup{font:italic 400 .9rem/0 var(--serif);letter-spacing:0;margin-left:4px;color:var(--brass)}
+.filters{overflow-x:auto;scrollbar-width:none;max-width:100%}
+.filters::-webkit-scrollbar{display:none}
+
+/* =====================================================================
+   GALLERY VIEW
+   ===================================================================== */
+.lk-view{display:none}
+.lk-view.active{display:block;animation:viewIn .9s var(--ease-out)}
+@keyframes viewIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.lk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,4vw,64px) clamp(16px,2.6vw,44px);padding:clamp(50px,6vw,90px) var(--gutter) clamp(90px,10vw,140px);align-items:start}
+.lk-card{display:block;text-align:left;perspective:900px;margin-top:calc(var(--off,0) * 80px)}
+.lk-media{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:var(--cream-2);transform-style:preserve-3d;transition:transform .8s var(--ease-out),box-shadow .8s;will-change:transform}
+.lk-card.shape-0 .lk-media{border-radius:999px 999px 4px 4px}
+.lk-card.shape-1 .lk-media{border-radius:4px}
+.lk-card.shape-2 .lk-media{border-radius:4px 4px 999px 999px}
+.lk-media img{position:absolute;inset:-4%;width:108%;height:108%;max-width:none;object-fit:cover;transition:transform 1.2s var(--ease-out),filter .8s}
+.lk-card:hover .lk-media{box-shadow:0 40px 70px -35px rgba(32,21,14,.55)}
+.lk-card:hover .lk-media img{transform:scale(1.05)}
+.lk-media::after{content:'';position:absolute;inset:12px;border:1px solid rgba(250,246,239,.6);border-radius:inherit;opacity:0;transition:opacity .6s,inset .6s var(--ease-out);pointer-events:none}
+.lk-card:hover .lk-media::after{opacity:1;inset:16px}
+.lk-open{position:absolute;left:50%;bottom:22px;transform:translate(-50%,12px);padding:10px 18px;border-radius:999px;background:rgba(32,21,14,.8);color:var(--cream);
+  font:500 .6rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;opacity:0;transition:opacity .5s,transform .6s var(--ease-out);white-space:nowrap}
+.lk-card:hover .lk-open,.lk-card:focus-visible .lk-open{opacity:1;transform:translate(-50%,0)}
+.lk-info{display:flex;align-items:baseline;gap:12px;margin-top:18px}
+.lk-info b{font:italic 400 .95rem/1 var(--serif);color:var(--brass)}
+.lk-name{font:400 clamp(1.15rem,1.6vw,1.4rem)/1.2 var(--serif)}
+.lk-fam{margin-left:auto;font:500 .58rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.lk-sw{display:flex;gap:6px;margin-top:12px}
+.lk-sw i{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);transform:scale(.4);opacity:.5;transition:transform .5s var(--ease-out) calc(var(--k) * 60ms),opacity .4s}
+.lk-card:hover .lk-sw i,.lk-card.in .lk-sw i{transform:scale(1);opacity:1}
+
+/* =====================================================================
+   SPOTLIGHT VIEW: one look at a time, revealed by a diagonal cut
+   ===================================================================== */
+.spot{position:relative;background:var(--tint,#20150E);color:var(--cream);transition:background-color 1.2s var(--ease-out)}
+.spot::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,rgba(217,189,138,.035) 0 1px,transparent 1px 26px),radial-gradient(60% 60% at 30% 50%,rgba(255,240,215,.07),transparent 70%)}
+.spot-stage{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,90px);align-items:center;min-height:calc(100svh - 70px);padding:clamp(40px,5vw,70px) var(--gutter) 30px}
+.spot-media{position:relative;display:flex;justify-content:center;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.spot-frame{position:relative;height:min(72vh,700px);aspect-ratio:3/4;max-width:100%;border-radius:999px 999px 4px 4px;overflow:hidden;background:var(--espresso-2);box-shadow:0 60px 110px -50px rgba(0,0,0,.8)}
+.spot-outline{position:absolute;inset:-16px;border:1px solid rgba(217,189,138,.45);border-radius:999px 999px 4px 4px;pointer-events:none}
+.spot-wrap{position:relative}
+.spot-img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;will-change:clip-path,transform}
+.spot-glint{position:absolute;top:-6%;height:112%;width:2px;margin-left:-1px;left:-10%;z-index:3;pointer-events:none;opacity:0;
+  background:linear-gradient(transparent,#FFF4DA 25%,#FFF4DA 75%,transparent);box-shadow:0 0 22px 6px rgba(255,236,200,.55)}
+.spot-info{position:relative;max-width:34rem}
+.spot-num{display:block;font:300 clamp(5.4rem,11vw,10.5rem)/.8 var(--sans);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px rgba(217,189,138,.55);margin-bottom:18px}
+.spot-fam{color:var(--brass-lt);margin-bottom:18px}
+.spot-name{font-size:clamp(2.6rem,5vw,4.8rem);margin-bottom:22px}
+.spot-note{color:rgba(244,236,223,.75);font-size:1.02rem;max-width:26rem;min-height:3.4em}
+.spot-pal{margin-top:34px}
+.spot-pal small{display:block;font:500 .6rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:rgba(244,236,223,.55);margin-bottom:14px}
+.spot-sw{display:flex;gap:14px}
+.spot-chip{display:flex;flex-direction:column;align-items:center;gap:8px}
+.spot-chip i{width:52px;height:70px;border-radius:999px 999px 4px 4px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12),0 14px 24px -12px rgba(0,0,0,.6)}
+.spot-chip span{font:500 .56rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:rgba(244,236,223,.55)}
+.spot-ctrl{display:flex;align-items:center;gap:14px;margin-top:40px}
+.round{width:56px;height:56px;border-radius:50%;border:1px solid rgba(244,236,223,.3);display:grid;place-items:center;transition:background .4s,color .4s,border-color .4s}
+.round:hover{background:var(--cream);color:var(--espresso);border-color:var(--cream)}
+.round svg{width:20px}
+.spot-count{font:500 .7rem/1 var(--sans);letter-spacing:.28em;color:rgba(244,236,223,.6);min-width:74px;text-align:center}
+.spot-count b{color:var(--cream);font-weight:500}
+.spot-play{position:relative;margin-left:auto}
+.spot-play .ring{position:absolute;inset:-1px;width:58px;height:58px;transform:rotate(-90deg);pointer-events:none}
+.spot-play .ring circle{fill:none;stroke:var(--brass-lt);stroke-width:1.5;stroke-dasharray:1;stroke-dashoffset:1}
+.spot-play .i-pause{display:none}
+.spot-play[aria-pressed="true"] .i-pause{display:block}
+.spot-play[aria-pressed="true"] .i-play{display:none}
+.spot-thumbs{position:relative;display:flex;gap:10px;justify-content:center;overflow-x:auto;padding:10px var(--gutter) 34px;scrollbar-width:none}
+.spot-thumbs::-webkit-scrollbar{display:none}
+.spot-thumbs button{flex:0 0 auto;width:46px;height:62px;border-radius:999px 999px 3px 3px;overflow:hidden;opacity:.4;transition:opacity .4s,transform .5s var(--ease-out),box-shadow .4s}
+.spot-thumbs button img{width:100%;height:100%;object-fit:cover}
+.spot-thumbs button:hover{opacity:.8}
+.spot-thumbs button.active{opacity:1;transform:translateY(-6px);box-shadow:0 0 0 1px var(--brass-lt)}
+.spot-hint{position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);font:500 .58rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:rgba(244,236,223,.45);white-space:nowrap}
+
+/* =====================================================================
+   CTA + FOOTER
+   ===================================================================== */
+.lk-cta{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,7vw,110px);align-items:center;padding:clamp(100px,12vw,170px) var(--gutter);background:var(--linen)}
+.lk-cta-copy{text-align:center}
+.lk-cta-photo{position:relative;justify-self:center;width:min(380px,100%);padding:12px;background:#fff;box-shadow:0 40px 80px -40px rgba(32,21,14,.5);transform:rotate(-4deg);transition:transform 1s var(--ease-out)}
+.lk-cta-photo:hover{transform:rotate(-1deg) translateY(-6px)}
+.lk-cta-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+@media (max-width:900px){.lk-cta{grid-template-columns:1fr}.lk-cta-photo{width:min(300px,80%)}}
+.lk-cta .label{justify-content:center;margin-bottom:28px}
+.lk-cta .label::before{content:'';width:44px;height:1px;background:currentColor;opacity:.45}
+.lk-cta .lede{margin:26px auto 44px}
+.lk-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.footer{background:var(--cream-2);padding:clamp(60px,8vw,100px) var(--gutter) 34px}
+.footer-mark{font-size:clamp(2.6rem,10vw,9rem);line-height:.9;text-align:center;margin-bottom:40px;white-space:nowrap}
+.footer-mark span{color:var(--bourbon)}
+.footer-base{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line);font:400 .66rem/1.6 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.footer-base a:hover{color:var(--bourbon)}
+
+/* ---------- Cursor ---------- */
+.cursor{display:none}
+.has-cursor .cursor{display:block}
+.has-cursor,.has-cursor a,.has-cursor button{cursor:none}
+.cursor-dot,.cursor-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:2000;will-change:transform}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--bourbon);transition:opacity .3s,background .3s}
+.cursor-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1px solid rgba(139,90,52,.55);display:grid;place-items:center;color:var(--espresso);
+  transition:width .5s var(--ease-out),height .5s var(--ease-out),margin .5s var(--ease-out),background .4s,border-color .4s,opacity .3s}
+.cursor-ring .scissors{position:absolute;width:0;opacity:0;transition:width .4s var(--ease-out),opacity .3s;color:inherit}
+.cursor-ring .c-label{position:absolute;font:500 .6rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.cursor.is-link .cursor-ring{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(217,189,138,.18);border-color:var(--brass)}
+.cursor.is-link .cursor-ring .scissors{width:36px;opacity:1}
+.cursor.is-link .cursor-dot,.cursor.is-view .cursor-dot{opacity:0}
+.cursor.is-view .cursor-ring{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--cream);border-color:var(--cream)}
+.cursor.is-view .c-label{opacity:1}
+.cursor.on-dark .cursor-ring{border-color:rgba(244,236,223,.55);color:var(--cream)}
+.cursor.on-dark .cursor-dot{background:var(--cream)}
+.cursor.on-dark.is-view .cursor-ring{color:var(--espresso)}
+.cursor.is-hidden .cursor-ring,.cursor.is-hidden .cursor-dot{opacity:0}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .lk-grid{grid-template-columns:repeat(2,1fr)}
+  .lk-card{margin-top:calc(var(--off,0) * 60px)}
+}
+@media (max-width:900px){
+  :root{--nav-h:72px}
+  .nav-links{display:none}
+  .menu-btn{display:inline-flex}
+  .lk-hero{grid-template-columns:1fr;gap:50px;padding-bottom:90px}
+  .fan{height:min(58vh,460px)}
+  .lk-bar{flex-direction:column;align-items:stretch;gap:10px;padding:10px var(--gutter)}
+  .views{align-self:flex-end}
+  .spot-stage{grid-template-columns:1fr;gap:34px;padding-top:30px;min-height:0}
+  .spot-frame{height:auto;width:min(calc(100vw - 2 * var(--gutter) - 36px), calc(58svh * .75))}
+  .spot-num{font-size:clamp(3.6rem,17vw,5rem);margin-bottom:6px}
+  /* phones: controls sit right under the photo so you never tap "next" on a photo you can't see */
+  .spot-info{display:contents}
+  .spot-media{order:1}
+  .spot-ctrl{order:2;margin-top:-6px;justify-content:center}
+  .spot-num,.spot-fam,.spot-name,.spot-note,.spot-pal{order:3}
+  .spot-stage{gap:0}
+  .spot-stage > *{margin-bottom:0}
+  .spot-media{margin-bottom:38px}
+  .spot-ctrl{margin-bottom:34px}
+  .spot-fam,.spot-name{margin-bottom:14px}
+  .spot-pal{margin-top:26px}
+  .spot-play{margin-left:10px}
+  .spot-hint{display:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .logo .script{font-size:1.7rem}
+  .lk-grid{gap:34px 14px}
+  .lk-card{margin-top:calc(var(--off,0) * 40px)}
+  .lk-info{flex-wrap:wrap;gap:4px 8px}
+  .lk-fam{display:none}
+  .lk-open{display:none}
+  /* filters fit on one line, with finger-sized buttons */
+  .seg button{padding:14px 11px;letter-spacing:.08em;font-size:.6rem}
+  .seg button sup{display:none}
+  .lk-cta-photo{width:min(260px,72%)}
+  .spot-chip i{width:44px;height:60px}
+  .spot-ctrl{gap:10px}
+  .lk-cta-actions .btn{flex:1 1 auto;justify-content:center}
+  .footer-base{justify-content:center;text-align:center}
+}
+
+
+/* ---------- Touch & small-phone polish ---------- */
+@media (max-width:900px){
+  .menu-btn{padding:14px 0 14px 10px}
+  .footer-base a{display:inline-block;padding:12px 4px}
+}
+/* ---------- Reduced motion ---------- */
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+.reduce-motion .curtain.open{opacity:0}
+.reduce-motion [data-reveal]{opacity:1!important;transform:none!important}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="brassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E2B8"/><stop offset=".45" stop-color="#C9A365"/><stop offset="1" stop-color="#8A6433"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain-half top"><span class="curtain-word">The Lookbook</span></div>
+  <div class="curtain-half bottom"><span class="curtain-sub">Hair by Hayden &middot; Murfreesboro, TN</span></div>
+  <div class="curtain-seam"></div>
+  <div class="curtain-shears scissors" data-scissors></div>
+</div>
+
+<div class="thread" aria-hidden="true"><div class="thread-cut"></div><div class="thread-shears scissors" data-scissors></div></div>
+
+<div class="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="scissors" data-scissors></span><span class="c-label">View</span></div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="index2.html" class="logo" data-transition aria-label="Hair by Hayden, home">
+    <span class="script">Hair by Hayden</span>
+    <small>Hair Stylist</small>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index2.html#meet" data-transition>Meet Hayden</a>
+    <a href="index2.html#menu" data-transition>Menu</a>
+    <a href="lookbook2.html" class="active" aria-current="page">Lookbook</a>
+    <a href="experience2.html" data-transition>Experience</a>
+    <a class="btn" href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener" data-magnetic>Book</a>
+  </nav>
+  <button class="menu-btn" aria-expanded="false" aria-controls="site-menu">
+    <span class="menu-btn-label">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span>
+  </button>
+</header>
+
+<div class="menu" id="site-menu" aria-label="Site menu">
+  <ol>
+    <li><a href="index2.html" data-transition>Home</a></li>
+    <li><a href="index2.html#meet" data-transition>Meet Hayden</a></li>
+    <li><a href="index2.html#menu" data-transition>The Menu</a></li>
+    <li><a href="#looks">The Lookbook</a></li>
+    <li><a href="experience2.html" data-transition>The Experience</a></li>
+    <li><a href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener">Reserve</a></li>
+  </ol>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="lk-hero">
+    <div>
+      <p class="label"><span class="num">&#8470;4</span> The Lookbook</p>
+      <h1>
+        <span class="line"><span>In the</span></span>
+        <span class="line"><span><em>chair.</em></span></span>
+      </h1>
+      <p class="lede">A curation of dimensional tones, glossy finishes and effortless everyday hair, all from Hayden&rsquo;s chair at The Look Beauty Bar in Murfreesboro.</p>
+      <div class="lk-stats">
+        <div class="lk-stat"><b data-stat="looks">11</b><span>Looks</span></div>
+        <div class="lk-stat"><b data-stat="families">3</b><span>Color families</span></div>
+        <div class="lk-stat"><b>1</b><span>Stylist</span></div>
+      </div>
+    </div>
+    <!-- The fanned photos are built from the LOOKS list in the script (see FAN_PICKS). -->
+    <div class="fan" aria-label="A few favorite looks. Select one to see it in the spotlight."></div>
+  </section>
+
+  <!-- ============ TOOLBAR ============ -->
+  <div class="lk-bar" id="looks">
+    <div class="seg filters" role="group" aria-label="Filter by color family"><span class="seg-pill" aria-hidden="true"></span></div>
+    <div class="seg views" role="group" aria-label="Choose a view">
+      <span class="seg-pill" aria-hidden="true"></span>
+      <button type="button" data-view="grid" aria-pressed="true">Gallery</button>
+      <button type="button" data-view="spot" aria-pressed="false">Spotlight</button>
+    </div>
+  </div>
+
+  <!-- ============ GALLERY VIEW (cards are built from LOOKS) ============ -->
+  <section class="lk-view active" id="view-grid" aria-label="Gallery">
+    <div class="lk-grid"></div>
+  </section>
+
+  <!-- ============ SPOTLIGHT VIEW ============ -->
+  <section class="lk-view spot" id="view-spot" aria-label="Spotlight" data-dark>
+    <div class="spot-stage">
+      <div class="spot-media">
+        <div class="spot-wrap">
+          <span class="spot-outline" aria-hidden="true"></span>
+          <div class="spot-frame">
+            <img class="spot-img" alt="">
+            <img class="spot-img" alt="">
+            <span class="spot-glint" aria-hidden="true"></span>
+          </div>
+          <span class="spot-hint">Swipe or use &larr; &rarr;</span>
+        </div>
+      </div>
+      <div class="spot-info" aria-live="polite">
+        <span class="spot-num" aria-hidden="true">01</span>
+        <p class="label spot-fam">Blonde</p>
+        <h2 class="display spot-name">Buttercream Blonde</h2>
+        <p class="spot-note"></p>
+        <div class="spot-pal"><small>The palette</small><div class="spot-sw"></div></div>
+        <div class="spot-ctrl">
+          <button class="round spot-prev" type="button" aria-label="Previous look"><svg viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 7H1M7 1L1 7l6 6"/></svg></button>
+          <span class="spot-count"><b>01</b> / 11</span>
+          <button class="round spot-next" type="button" aria-label="Next look"><svg viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 7h19M13 1l6 6-6 6"/></svg></button>
+          <button class="round spot-play" type="button" aria-pressed="false" aria-label="Autoplay">
+            <svg class="ring" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="28" pathLength="1"/></svg>
+            <svg class="i-play" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 4l10 6-10 6z"/></svg>
+            <svg class="i-pause" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5 4h3v12H5zM12 4h3v12h-3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="spot-thumbs" aria-label="All looks"></div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="lk-cta">
+    <figure class="lk-cta-photo" data-reveal>
+      <!-- PHOTO: "Now Booking" portrait in the closing section. Swap src + alt to change. -->
+      <img src="now_booking_portrait.jpg" alt="Hayden in sunglasses reading a newspaper painted with the words Now Booking" loading="lazy">
+    </figure>
+    <div class="lk-cta-copy">
+    <p class="label" data-reveal>Your turn</p>
+    <h2 class="display" data-reveal="lines">
+      <span class="line"><span>Seen one you</span></span>
+      <span class="line"><span><em>love?</em></span></span>
+    </h2>
+    <p class="lede" data-reveal>Screenshot it and bring it to your consultation. Hayden will tailor it to your hair, your tone and your routine.</p>
+    <div class="lk-cta-actions" data-reveal>
+      <a class="btn btn-solid" href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener" data-magnetic>
+        Reserve a Chair
+        <svg class="arrow" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 5h17M13 1l4 4-4 4"/></svg>
+      </a>
+      <a class="btn" href="index2.html" data-transition data-magnetic>Back to Home</a>
+    </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer-mark script">Hair by <span>Hayden</span></p>
+  <div class="footer-base">
+    <span>&copy; <span id="year">2026</span> Hair by Hayden &middot; The Look Beauty Bar, Murfreesboro TN</span>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+
+  /* ==================================================================
+     THE LOOKS: edit this list to change the lookbook.
+     Every card, the fanned hero photos and the spotlight are built
+     from it. To add a look, copy one line and change it:
+       src      the photo file
+       name     the caption
+       family   'blonde', 'brunette' or 'red' (drives the filters)
+       note     one sentence shown in the spotlight
+       swatches four hair tones shown as the look's palette (hex colors)
+     ================================================================== */
+  const LOOKS = [
+    { src: 'client_hair_2.png',  name: 'Buttercream Blonde',     family: 'blonde',   alt: 'Long, sleek buttercream blonde',                     note: 'Long, sleek and bright, with a soft buttery tone from root to end.',            swatches: ['#EAD5A8', '#D4B27A', '#B89059', '#8A6A45'] },
+    { src: 'client_hair_1.png',  name: 'Icy Lived-in Blonde',    family: 'blonde',   alt: 'Soft, icy lived-in blonde with face-framing pieces', note: 'Cool, dimensional pieces that frame the face and grow out softly.',             swatches: ['#E7E0D2', '#C9BBA3', '#A6937A', '#6F604F'] },
+    { src: 'client_hair_11.png', name: 'Golden Melt',            family: 'blonde',   alt: 'Golden blonde melt, sleek finish',                   note: 'A warm golden blonde melted from root to end with a glassy finish.',            swatches: ['#F0D9A4', '#D9B575', '#B88D52', '#7D5A37'] },
+    { src: 'client_hair_4.png',  name: 'Honey Gold',             family: 'blonde',   alt: 'Honey gold highlights in loose waves',               note: 'Honeyed highlights woven through loose, brushed-out waves.',                    swatches: ['#E6C38D', '#C99A5E', '#A0713F', '#5D3F28'] },
+    { src: 'client_hair_3.png',  name: 'Bronzed Bob',            family: 'brunette', alt: 'Brunette bob with sun-kissed bronze highlights',     note: 'A soft brunette bob lit with sun-kissed bronze ribbons.',                       swatches: ['#C79467', '#8E5F3C', '#5C3B25', '#2F1F16'] },
+    { src: 'client_hair_10.png', name: 'Caramel Glow',           family: 'brunette', alt: 'Soft caramel balayage with face-framing layers',     note: 'Caramel balayage and face-framing layers with a lit-from-within glow.',         swatches: ['#D7A473', '#A8703F', '#704523', '#3A2416'] },
+    { src: 'client_hair_9.png',  name: 'Chocolate Layers',       family: 'brunette', alt: 'Long chocolate layers with warm dimension',          note: 'Long, rich chocolate layers with warm dimension through the ends.',             swatches: ['#A0643A', '#6F3F22', '#482615', '#24140C'] },
+    { src: 'client_hair_7.png',  name: 'Ribboned Espresso',      family: 'brunette', alt: 'Dark waves with soft ribbon highlights',             note: 'Deep espresso waves threaded with soft, cool ribbons of light.',                swatches: ['#B8AA9A', '#6B5A4C', '#3B2F28', '#1C1613'] },
+    { src: 'client_hair_8.png',  name: 'Midnight Curls',         family: 'brunette', alt: 'Deep brunette with glossy bouncy curls',             note: 'Deep brunette with a violet cast, set in glossy, bouncy curls.',                swatches: ['#6B3B40', '#44222A', '#2A1419', '#140A0C'] },
+    { src: 'client_hair_6.png',  name: 'Copper & Curtain Bangs', family: 'red',      alt: 'Copper layers with curtain bangs',                   note: 'Soft copper with face-framing layers and a curtain bang.',                      swatches: ['#E0925A', '#C0652F', '#8F421D', '#57250F'] },
+    { src: 'client_hair_5.png',  name: 'Ruby Ribbons',           family: 'red',      alt: 'Deep brunette waves with bold ruby red ribbons',     note: 'Deep brunette waves with bold ruby red ribbons running through.',               swatches: ['#E0303A', '#A41F2B', '#6A1A22', '#2E1214'] }
+  ];
+  const FAMILIES = { blonde: 'Blonde', brunette: 'Brunette', red: 'Copper & Red' };
+  const FAN_PICKS = [0, 9, 5, 10, 2];   // which looks (by position in LOOKS, starting at 0) appear in the hero fan
+  const AUTOPLAY_MS = 5200;             // how long each look stays up in Spotlight autoplay
+
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const pad = n => String(n).padStart(2, '0');
+  const slug = s => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const root = document.documentElement, body = document.body;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduce) root.classList.add('reduce-motion');
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---------- Shears ---------- */
+  const SHEARS = '<svg class="scissors-svg" viewBox="0 0 120 60" aria-hidden="true" focusable="false">' +
+    '<g class="blade blade-a"><path class="edge" d="M50 31.5C72 27.5 96 27 118 30C96 30.5 74 32 50 34Z"/><path class="arm" d="M31.5 19.5Q44 25 53 30"/><circle class="ring" cx="22" cy="15" r="10"/></g>' +
+    '<g class="blade blade-b"><path class="edge" d="M50 28.5C72 32.5 96 33 118 30C96 29.5 74 28 50 26Z"/><path class="arm" d="M31.5 40.5Q44 35 53 30"/><circle class="ring" cx="22" cy="45" r="10"/></g>' +
+    '<circle class="pivot" cx="53" cy="30" r="2.6"/></svg>';
+  $$('[data-scissors]').forEach(el => { el.innerHTML = SHEARS; });
+
+  /* ---------- Build: stats, filters, cards, fan, thumbnails ---------- */
+  $('[data-stat="looks"]').textContent = LOOKS.length;
+  const famKeys = Object.keys(FAMILIES).filter(f => LOOKS.some(l => l.family === f));
+  $('[data-stat="families"]').textContent = famKeys.length;
+
+  const filterBar = $('.filters');
+  filterBar.insertAdjacentHTML('beforeend',
+    `<button type="button" data-filter="all" aria-pressed="true">All<sup>${LOOKS.length}</sup></button>` +
+    famKeys.map(f => `<button type="button" data-filter="${f}" aria-pressed="false">${FAMILIES[f]}<sup>${LOOKS.filter(l => l.family === f).length}</sup></button>`).join(''));
+
+  const grid = $('.lk-grid');
+  grid.innerHTML = LOOKS.map((l, i) => `
+    <button class="lk-card shape-${i % 3}" type="button" data-i="${i}" data-family="${l.family}" data-reveal style="--d:${(i % 3) * .08}s" data-cursor="view" aria-label="Open ${esc(l.name)} in the spotlight">
+      <span class="lk-media"><img src="${l.src}" alt="${esc(l.alt)}" loading="lazy"><span class="lk-open">View in spotlight</span></span>
+      <span class="lk-info"><b>No. ${pad(i + 1)}</b><span class="lk-name">${esc(l.name)}</span><span class="lk-fam">${FAMILIES[l.family]}</span></span>
+      <span class="lk-sw">${l.swatches.map((c, k) => `<i style="background:${c};--k:${k}"></i>`).join('')}</span>
+    </button>`).join('');
+  const cards = $$('.lk-card', grid);
+
+  const fan = $('.fan');
+  fan.innerHTML = FAN_PICKS.map(i => `<button class="fan-card" type="button" data-i="${i}" data-name="${esc(LOOKS[i].name)}" aria-label="See ${esc(LOOKS[i].name)}"><img src="${LOOKS[i].src}" alt="${esc(LOOKS[i].alt)}"></button>`).join('') +
+    '<span class="fan-hint" aria-hidden="true">Tap a photo</span>';
+  const fanCards = $$('.fan-card', fan);
+
+  const thumbs = $('.spot-thumbs');
+  thumbs.innerHTML = LOOKS.map((l, i) => `<button type="button" data-i="${i}" aria-label="${esc(l.name)}"><img src="${l.src}" alt="" loading="lazy"></button>`).join('');
+  const thumbBtns = $$('button', thumbs);
+
+  /* ---------- Curtain in / out ---------- */
+  const curtain = $('#curtain');
+  let seen = false;
+  try { seen = sessionStorage.getItem('hbh-lookbook-seen') === '1'; sessionStorage.setItem('hbh-lookbook-seen', '1'); } catch (e) {}
+  const ready = () => body.classList.add('is-ready');
+  const openCurtain = () => {
+    if (reduce) { curtain.classList.add('open', 'done'); ready(); return; }
+    const run = seen ? 650 : 1100;
+    curtain.style.setProperty('--run', run + 'ms');
+    $('.curtain-shears').classList.add('snipping');
+    curtain.classList.add('cutting');
+    setTimeout(() => { curtain.classList.add('open'); ready(); }, run - 60);
+    setTimeout(() => curtain.classList.add('done'), run + 1200);
+  };
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  Promise.race([fontsReady, new Promise(r => setTimeout(r, 2000))]).then(() => setTimeout(openCurtain, seen ? 40 : 250));
+
+  const leaveTo = href => {
+    if (reduce) { location.href = href; return; }
+    curtain.classList.remove('done', 'cutting');
+    curtain.classList.add('leaving');
+    void curtain.offsetWidth;
+    curtain.classList.remove('open');
+    setTimeout(() => { location.href = href; }, 820);
+  };
+  $$('a[data-transition]').forEach(a => a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault(); leaveTo(a.getAttribute('href'));
+  }));
+  addEventListener('pageshow', e => { if (e.persisted) { curtain.classList.remove('leaving'); curtain.classList.add('open', 'done'); ready(); } });
+
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = $('.menu-btn');
+  const setMenu = open => {
+    root.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    $('.menu-btn-label').textContent = open ? 'Close' : 'Menu';
+  };
+  menuBtn.addEventListener('click', () => setMenu(!root.classList.contains('menu-open')));
+  $$('.menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* ---------- Reveal on enter ---------- */
+  let io = null;
+  if ('IntersectionObserver' in window && !reduce) {
+    io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { rootMargin: '0px 0px -8% 0px', threshold: .01 });
+    $$('[data-reveal]').forEach(el => io.observe(el));
+  } else $$('[data-reveal]').forEach(el => el.classList.add('in'));
+
+  /* ==================================================================
+     HERO FAN: a hand of photos. Every few seconds the front photo is
+     tossed to the back of the stack; hovering spreads the hand.
+     ================================================================== */
+  const FAN_POS = [
+    { x: '0%', y: '0%', r: '-2deg', s: 1 },
+    { x: '16%', y: '2%', r: '7deg', s: .95 },
+    { x: '-16%', y: '3%', r: '-10deg', s: .92 },
+    { x: '28%', y: '6%', r: '14deg', s: .88 },
+    { x: '-28%', y: '7%', r: '-16deg', s: .85 }
+  ];
+  let fanOrder = fanCards.map((_, i) => i);
+  const layoutFan = () => fanOrder.forEach((ci, k) => {
+    const c = fanCards[ci], p = FAN_POS[k];
+    c.style.setProperty('--x', p.x); c.style.setProperty('--y', p.y);
+    c.style.setProperty('--r', p.r); c.style.setProperty('--s', p.s);
+    c.style.zIndex = String(10 - k);
+    c.classList.toggle('front', k === 0);
+  });
+  layoutFan();
+  let fanHover = false, heroVisible = true;
+  fan.addEventListener('mouseenter', () => { fanHover = true; });
+  fan.addEventListener('mouseleave', () => { fanHover = false; });
+  const shuffleFan = () => {
+    if (reduce || fanHover || !heroVisible || document.hidden) return;
+    const top = fanCards[fanOrder[0]];
+    top.classList.add('thrown');
+    setTimeout(() => {
+      fanOrder.push(fanOrder.shift());
+      top.classList.remove('thrown');
+      layoutFan();
+    }, 520);
+  };
+  setInterval(shuffleFan, 3400);
+  if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { heroVisible = en.isIntersecting; }).observe($('.lk-hero'));
+  fanCards.forEach(c => c.addEventListener('click', () => openSpotlight(+c.dataset.i)));
+
+  /* ==================================================================
+     SEGMENTED CONTROLS (filters + view switch) with a sliding pill
+     ================================================================== */
+  const movePill = seg => {
+    const on = $('[aria-pressed="true"]', seg), pill = $('.seg-pill', seg);
+    if (!on) return;
+    pill.style.left = on.offsetLeft + 'px';
+    pill.style.width = on.offsetWidth + 'px';
+  };
+  const bar = $('.lk-bar');
+  const scrollToBar = () => {
+    // the toolbar is sticky, so measure where it naturally sits: right under the hero
+    const hero = $('.lk-hero');
+    const y = hero.offsetTop + hero.offsetHeight - 1;
+    window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+  };
+
+  /* ==================================================================
+     FILTERING: cards leave, the rest glide to their new spots, the new
+     ones rise in. (Measure first, change the layout, then animate the
+     difference, so it stays smooth.)
+     ================================================================== */
+  let filter = 'all', filtering = false;
+  let pool = LOOKS.map((_, i) => i);               // which looks are showing
+  const matches = c => filter === 'all' || c.dataset.family === filter;
+  const setOffsets = () => {
+    const cols = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+    cards.filter(c => !c.hidden).forEach((c, i) => c.style.setProperty('--off', cols >= 3 ? (i % 3 === 1 ? 1 : 0) : (i % 2 === 1 ? 1 : 0)));
+  };
+  setOffsets();
+
+  const applyFilter = async f => {
+    if (filtering || f === filter) return;
+    filtering = true;
+    filter = f;
+    $$('button', filterBar).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === f)));
+    movePill(filterBar);
+    pool = LOOKS.map((_, i) => i).filter(i => f === 'all' || LOOKS[i].family === f);
+
+    const leaving = cards.filter(c => !c.hidden && !matches(c));
+    const staying = cards.filter(c => !c.hidden && matches(c));
+    const entering = cards.filter(c => c.hidden && matches(c));
+    const ease = 'cubic-bezier(.16,1,.3,1)';
+
+    if (!reduce && leaving.length) {
+      await Promise.all(leaving.map(c => c.animate(
+        [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'scale(.9) translateY(20px)' }],
+        { duration: 300, easing: 'ease-in', fill: 'forwards' }).finished));
+    }
+    const first = new Map(staying.map(c => [c, c.getBoundingClientRect()]));
+    leaving.forEach(c => { c.hidden = true; c.getAnimations().forEach(a => a.cancel()); });
+    entering.forEach(c => { c.hidden = false; c.classList.add('in'); });
+    setOffsets();
+
+    if (!reduce) {
+      staying.forEach(c => {
+        const a = first.get(c), b = c.getBoundingClientRect();
+        const dx = a.left - b.left, dy = a.top - b.top;
+        if (Math.abs(dx) + Math.abs(dy) > 1) c.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: 'none' }], { duration: 800, easing: ease });
+      });
+      entering.forEach((c, k) => c.animate(
+        [{ opacity: 0, transform: 'translateY(40px) scale(.94)' }, { opacity: 1, transform: 'none' }],
+        { duration: 800, delay: 150 + k * 70, easing: ease, fill: 'backwards' }));
+    }
+
+    if (view === 'spot' && !pool.includes(cur)) showLook(pool[0], 1);
+    else updateSpotChrome();
+    setTimeout(() => { filtering = false; }, reduce ? 0 : 500);
+  };
+  filterBar.addEventListener('click', e => { const b = e.target.closest('[data-filter]'); if (b) applyFilter(b.dataset.filter); });
+
+  /* ---------- Card tilt: the photo leans toward the cursor ---------- */
+  if (finePointer && !reduce) {
+    cards.forEach(c => {
+      const m = $('.lk-media', c), img = $('img', c);
+      c.addEventListener('mousemove', e => {
+        const r = m.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        m.style.transform = `rotateY(${(x * 10).toFixed(2)}deg) rotateX(${(-y * 10).toFixed(2)}deg)`;
+        img.style.transform = `scale(1.08) translate(${(-x * 14).toFixed(1)}px, ${(-y * 14).toFixed(1)}px)`;
+      });
+      c.addEventListener('mouseleave', () => { m.style.transform = ''; img.style.transform = ''; });
+    });
+  }
+  cards.forEach(c => c.addEventListener('click', () => openSpotlight(+c.dataset.i)));
+
+  /* ==================================================================
+     SPOTLIGHT: one look at a time. A new photo is revealed by a
+     diagonal cut with a brass glint running down the edge, and the
+     whole stage takes on a tint of that look's hair color.
+     ================================================================== */
+  const spotEl = $('#view-spot');
+  const layers = $$('.spot-img', spotEl);
+  const glint = $('.spot-glint', spotEl);
+  const frame = $('.spot-frame', spotEl);
+  const S = {
+    num: $('.spot-num', spotEl), fam: $('.spot-fam', spotEl), name: $('.spot-name', spotEl),
+    note: $('.spot-note', spotEl), sw: $('.spot-sw', spotEl), count: $('.spot-count', spotEl)
+  };
+  let view = 'grid', cur = 0, front = 0, busy = false, started = false;
+  let playing = false, elapsed = 0, spotVisible = false;
+
+  const mix = (hex, t) => { // blend a hair tone into espresso for the stage tint
+    const n = parseInt(hex.slice(1), 16), base = [0x20, 0x15, 0x0E];
+    const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v, i) => Math.round(base[i] + (v - base[i]) * t));
+    return `rgb(${c.join(',')})`;
+  };
+
+  const renderText = L => {
+    S.num.textContent = pad(cur + 1);
+    S.fam.textContent = FAMILIES[L.family];
+    S.name.textContent = L.name;
+    S.note.textContent = L.note;
+    S.sw.innerHTML = L.swatches.map(c => `<span class="spot-chip"><i style="background:${c}"></i><span>${c}</span></span>`).join('');
+  };
+  const updateSpotChrome = () => {
+    const k = pool.indexOf(cur);
+    S.count.innerHTML = `<b>${pad(k + 1)}</b> / ${pad(pool.length)}`;
+    thumbBtns.forEach((t, i) => { t.hidden = !pool.includes(i); t.classList.toggle('active', i === cur); });
+    const t = thumbBtns[cur];
+    if (t && !t.hidden) thumbs.scrollTo({ left: t.offsetLeft - thumbs.clientWidth / 2 + t.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+  };
+
+  const showLook = (i, dir = 1, instant = false) => {
+    if (busy && !instant) return;
+    const L = LOOKS[i];
+    const inc = layers[1 - front], out = layers[front];
+    cur = i;
+    spotEl.style.setProperty('--tint', mix(L.swatches[1], .3));
+    inc.src = L.src; inc.alt = L.alt;
+    updateSpotChrome();
+    if (view === 'spot') { try { history.replaceState(null, '', '#look-' + slug(L.name)); } catch (e) {} }
+    elapsed = 0;
+
+    if (instant || reduce || !inc.animate) {
+      inc.style.zIndex = 2; out.style.zIndex = 1; inc.style.opacity = 1; out.style.opacity = 0;
+      inc.style.clipPath = 'none'; front = 1 - front;
+      renderText(L);
+      return;
+    }
+    busy = true;
+    const ease = 'cubic-bezier(.76,0,.24,1)', D = 1100;
+    inc.style.zIndex = 2; out.style.zIndex = 1; inc.style.opacity = 1;
+    const from = dir > 0 ? 'polygon(115% 0%, 100% 0%, 100% 100%, 100% 100%)' : 'polygon(0% 0%, 0% 0%, -15% 100%, 0% 100%)';
+    const to   = dir > 0 ? 'polygon(0% 0%, 100% 0%, 100% 100%, -15% 100%)' : 'polygon(0% 0%, 115% 0%, 100% 100%, 0% 100%)';
+    inc.animate([{ clipPath: from, transform: 'scale(1.18)' }, { clipPath: to, transform: 'scale(1)' }], { duration: D, easing: ease });
+    out.animate([{ transform: 'scale(1)', filter: 'brightness(1)' }, { transform: 'scale(1.08)', filter: 'brightness(.5)' }], { duration: D, easing: ease });
+    const r = frame.getBoundingClientRect();
+    const tilt = Math.atan2(.15 * r.width, r.height) * 180 / Math.PI;
+    glint.animate([
+      { left: dir > 0 ? '107.5%' : '-7.5%', opacity: 0, transform: `rotate(${tilt}deg)` },
+      { opacity: 1, offset: .15 },
+      { opacity: 1, offset: .85 },
+      { left: dir > 0 ? '-7.5%' : '107.5%', opacity: 0, transform: `rotate(${tilt}deg)` }
+    ], { duration: D, easing: ease });
+
+    // words slide out, then the new ones slide in
+    const parts = [S.num, S.fam, S.name, S.note, S.sw];
+    parts.forEach((el, k) => el.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-18px)' }], { duration: 320, delay: k * 30, easing: 'ease-in', fill: 'forwards' }));
+    setTimeout(() => {
+      renderText(L);
+      parts.forEach((el, k) => {
+        el.getAnimations().forEach(a => a.cancel());
+        el.animate([{ opacity: 0, transform: 'translateY(26px)' }, { opacity: 1, transform: 'none' }], { duration: 800, delay: k * 70, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' });
+      });
+      $$('.spot-chip i', S.sw).forEach((d, k) => d.animate([{ transform: 'scale(.3) translateY(20px)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 700, delay: 300 + k * 80, easing: 'cubic-bezier(.34,1.56,.64,1)', fill: 'backwards' }));
+    }, 380);
+
+    setTimeout(() => { out.style.opacity = 0; inc.style.clipPath = 'none'; front = 1 - front; busy = false; }, D + 20);
+  };
+
+  const step = (dir, byUser = true) => {
+    if (busy) return;
+    if (byUser) setPlay(false);
+    const k = pool.indexOf(cur);
+    showLook(pool[(k + dir + pool.length) % pool.length], dir);
+  };
+
+  const setView = v => {
+    if (v === view) return;
+    view = v;
+    $$('.views button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    movePill($('.views'));
+    $('#view-grid').classList.toggle('active', v === 'grid');
+    spotEl.classList.toggle('active', v === 'spot');
+    if (v === 'spot') {
+      if (!pool.includes(cur)) cur = pool[0];
+      showLook(cur, 1, true);
+      if (!started && !reduce) setPlay(true);
+      started = true;
+    } else {
+      setPlay(false);
+      try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    }
+  };
+  function openSpotlight(i) {
+    if (!pool.includes(i)) applyFilter('all');
+    cur = i;
+    if (view === 'spot') showLook(i, 1);
+    else setView('spot');
+    scrollToBar();
+  }
+  $('.views').addEventListener('click', e => { const b = e.target.closest('[data-view]'); if (b) { setView(b.dataset.view); scrollToBar(); } });
+  $('.spot-prev').addEventListener('click', () => step(-1));
+  $('.spot-next').addEventListener('click', () => step(1));
+  thumbs.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const i = +b.dataset.i; if (i === cur) return;
+    setPlay(false);
+    showLook(i, pool.indexOf(i) > pool.indexOf(cur) ? 1 : -1);
+  });
+  addEventListener('keydown', e => {
+    if (view !== 'spot' || e.target.closest('input,textarea')) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+  });
+  // swipe
+  let sx = null, sy = null;
+  const media = $('.spot-media', spotEl);
+  media.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; });
+  media.addEventListener('pointerup', e => {
+    if (sx === null) return;
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    sx = null;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) step(dx < 0 ? 1 : -1);
+  });
+
+  /* ---------- Autoplay with a progress ring ---------- */
+  const playBtn = $('.spot-play'), ring = $('.spot-play .ring circle');
+  let last = performance.now();
+  function setPlay(on) {
+    playing = on;
+    playBtn.setAttribute('aria-pressed', String(on));
+    playBtn.setAttribute('aria-label', on ? 'Pause autoplay' : 'Play autoplay');
+    if (!on) ring.style.strokeDashoffset = '1';
+  }
+  playBtn.addEventListener('click', () => { setPlay(!playing); elapsed = 0; });
+  if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { spotVisible = en.isIntersecting; }, { threshold: .35 }).observe(spotEl);
+
+  /* ==================================================================
+     Page-wide loop: progress seam, nav, sticky toolbar, cursor, autoplay
+     ================================================================== */
+  const nav = $('#nav'), threadCut = $('.thread-cut'), threadShears = $('.thread-shears');
+  let lastY = -1, snipT = 0;
+  const cursor = $('.cursor'), cDot = $('.cursor-dot'), cRing = $('.cursor-ring');
+  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+
+  if (finePointer) {
+    root.classList.add('has-cursor');
+    addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cDot.style.transform = `translate3d(${mx}px,${my}px,0)`;
+      cursor.classList.remove('is-hidden');
+      const t = e.target;
+      const viewEl = t.closest('[data-cursor="view"], .fan-card');
+      const link = !viewEl && t.closest('a, button');
+      cursor.classList.toggle('is-view', !!viewEl);
+      cursor.classList.toggle('is-link', !!link);
+      cursor.classList.toggle('on-dark', !!t.closest('[data-dark], .menu'));
+      $('.scissors', cRing).classList.toggle('snipping', !!link);
+    }, { passive: true });
+    document.addEventListener('mouseleave', () => cursor.classList.add('is-hidden'));
+    if (!reduce) $$('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .28}px, ${(e.clientY - r.top - r.height / 2) * .36}px)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  const loop = now => {
+    const dt = Math.min(64, now - last); last = now;
+    const y = scrollY;
+    if (y !== lastY) {
+      const docH = root.scrollHeight - innerHeight;
+      const p = docH > 0 ? clamp(y / docH) : 0;
+      threadCut.style.transform = `scaleX(${p})`;
+      threadShears.style.transform = `translateX(${p * innerWidth - 30}px)`;
+      if (!reduce) { threadShears.classList.add('snipping'); snipT = now; }
+      const d = y - (lastY < 0 ? y : lastY);
+      nav.classList.toggle('scrolled', y > 30);
+      if (!root.classList.contains('menu-open')) {
+        if (d > 4 && y > innerHeight * .5) nav.classList.add('hide');
+        else if (d < -4 || y < innerHeight * .5) nav.classList.remove('hide');
+      }
+      // the toolbar tucks under the nav when the nav is showing
+      bar.style.top = nav.classList.contains('hide') ? '0px' : nav.offsetHeight + 'px';
+      lastY = y;
+    }
+    if (now - snipT > 160) threadShears.classList.remove('snipping');
+
+    if (finePointer) {
+      const k = reduce ? 1 : 1 - Math.pow(.8, dt / 16.67);
+      rx += (mx - rx) * k; ry += (my - ry) * k;
+      cRing.style.transform = `translate3d(${rx.toFixed(1)}px,${ry.toFixed(1)}px,0)`;
+    }
+
+    if (playing && view === 'spot' && spotVisible && !busy && !document.hidden) {
+      elapsed += dt;
+      ring.style.strokeDashoffset = String(1 - clamp(elapsed / AUTOPLAY_MS));
+      if (elapsed >= AUTOPLAY_MS) { elapsed = 0; step(1, false); }
+    }
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+
+  const relayout = () => { movePill(filterBar); movePill($('.views')); setOffsets(); };
+  addEventListener('resize', () => { clearTimeout(relayout.t); relayout.t = setTimeout(relayout, 120); });
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(relayout);
+  relayout();
+
+  /* ---------- Deep link: lookbook2.html#look-ruby-ribbons opens that look ---------- */
+  const m = location.hash.match(/^#look-(.+)$/);
+  if (m) {
+    const i = LOOKS.findIndex(l => slug(l.name) === m[1]);
+    if (i >= 0) { cur = i; setView('spot'); setTimeout(scrollToBar, 1400); }
+  }
+})();
+</script>
+</body>
+</html>

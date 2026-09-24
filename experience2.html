@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Experience | Hair by Hayden, Murfreesboro TN</title>
+<meta name="description" content="What to expect in Hayden's chair at The Look Beauty Bar in Murfreesboro, Tennessee: from the first sip of sweet tea to the final look in the mirror.">
+<meta name="theme-color" content="#20150E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%82%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>.curtain{display:none!important}</style></noscript>
+
+<style>
+/* Shared with index2.html and lookbook2.html: tokens, type, buttons, shears, curtain, nav, cursor, footer */
+:root{
+  --cream:#F4ECDF; --cream-2:#EDE2D1; --linen:#FAF6EF;
+  --espresso:#20150E; --espresso-2:#2E2018;
+  --bourbon:#8B5A34; --brass:#B08A4F; --brass-lt:#D9BD8A;
+  --ink:#20150E; --muted:#6E5E51; --line:rgba(32,21,14,.14);
+  --serif:'Cormorant Garamond','Times New Roman',serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --script:'Pinyon Script','Snell Roundhand',cursive;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.76,0,.24,1);
+  --gutter:clamp(16px,5vw,80px);
+  --nav-h:84px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}
+::selection{background:var(--brass);color:var(--linen)}
+:focus-visible{outline:1.5px solid var(--brass);outline-offset:4px}
+body::after{
+  content:'';position:fixed;inset:0;z-index:900;pointer-events:none;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.skip{position:absolute;left:-999px;top:12px;z-index:3000;background:var(--espresso);color:var(--cream);padding:10px 18px}
+.skip:focus{left:12px}
+
+/* ---------- Type ---------- */
+.label{display:inline-flex;align-items:center;gap:14px;font:500 .7rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--bourbon)}
+.label .num{font:italic 400 1.15rem/1 var(--serif);letter-spacing:0;color:var(--brass)}
+.label::after{content:'';width:44px;height:1px;background:currentColor;opacity:.45}
+.display{font-family:var(--serif);font-weight:300;font-size:clamp(2.7rem,6.2vw,5.8rem);line-height:.98;letter-spacing:-.015em}
+.display em{font-style:italic;font-weight:400;color:var(--bourbon)}
+.script{font-family:var(--script);font-weight:400}
+.lede{font-size:1.06rem;color:var(--muted);max-width:34rem}
+.line{display:block;overflow:hidden;padding:0 .12em .1em 0;margin-bottom:-.1em}
+.line > span{display:inline-block}
+
+/* ---------- Buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:14px;padding:18px 34px;border-radius:999px;overflow:hidden;isolation:isolate;
+  font:500 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;border:1px solid var(--espresso);
+  transition:color .5s var(--ease-out),border-color .5s,transform .6s var(--ease-out)}
+.btn::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--espresso);transform:translateY(101%);transition:transform .6s var(--ease-out)}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn:hover,.btn:focus-visible{color:var(--cream)}
+.btn-solid{background:var(--espresso);color:var(--cream)}
+.btn-solid::before{background:var(--bourbon)}
+.btn .arrow{width:18px;height:10px;transition:transform .5s var(--ease-out)}
+.btn:hover .arrow{transform:translateX(5px)}
+
+/* ---------- Shears (same drawing as the homepage) ---------- */
+.scissors{display:inline-block;color:var(--espresso);line-height:0}
+.scissors-svg{width:100%;height:auto;overflow:visible}
+.scissors-svg .blade{transform-box:view-box;transform-origin:53px 30px;transition:transform .45s var(--ease-out)}
+.scissors-svg .blade-a{transform:rotate(calc(var(--open,7) * 1deg))}
+.scissors-svg .blade-b{transform:rotate(calc(var(--open,7) * -1deg))}
+.scissors-svg .ring{fill:none;stroke:currentColor;stroke-width:3.2}
+.scissors-svg .arm{fill:none;stroke:currentColor;stroke-width:3.4;stroke-linecap:round}
+.scissors-svg .edge{fill:url(#brassGrad);stroke:currentColor;stroke-width:.7;stroke-linejoin:round}
+.scissors-svg .pivot{fill:var(--brass-lt);stroke:currentColor;stroke-width:1.2}
+.snipping .scissors-svg .blade-a,.scissors.snipping .blade-a{animation:snipA .42s var(--ease-io) infinite}
+.snipping .scissors-svg .blade-b,.scissors.snipping .blade-b{animation:snipB .42s var(--ease-io) infinite}
+@keyframes snipA{0%,100%{transform:rotate(20deg)}50%{transform:rotate(0deg)}}
+@keyframes snipB{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(0deg)}}
+
+/* ---------- Curtain (page intro + page-leave transition) ---------- */
+.curtain{position:fixed;inset:0;z-index:1500;pointer-events:all}
+.curtain.done{visibility:hidden;pointer-events:none}
+.curtain-half{position:absolute;left:0;width:100%;height:50.2%;background:var(--espresso);color:var(--cream);display:flex;justify-content:center;transition:transform 1.15s var(--ease-io)}
+.curtain-half::before{content:'';position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(90deg,rgba(217,189,138,.05) 0 1px,transparent 1px 26px)}
+.curtain-half.top{top:0;align-items:flex-end;padding-bottom:34px}
+.curtain-half.bottom{bottom:0;align-items:flex-start;padding-top:34px}
+.curtain-word{font-family:var(--script);font-size:clamp(2.8rem,7vw,5.4rem);line-height:1;transition:transform 1.15s var(--ease-io),opacity .8s}
+.curtain-sub{font:400 .68rem/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--brass-lt);transition:transform 1.15s var(--ease-io),opacity .8s}
+.curtain-seam{position:absolute;top:50%;left:0;width:100%;height:1px;margin-top:-.5px;background:repeating-linear-gradient(90deg,var(--brass) 0 9px,transparent 9px 16px)}
+.curtain-shears{position:absolute;top:50%;left:0;width:92px;color:var(--cream);transform:translate(-110%,-50%)}
+.curtain.cutting .curtain-shears{animation:shearsRun var(--run,1.1s) var(--ease-io) forwards}
+.curtain.cutting .curtain-seam{animation:seamCut var(--run,1.1s) var(--ease-io) forwards}
+@keyframes shearsRun{to{transform:translate(calc(100vw + 10%),-50%)}}
+@keyframes seamCut{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
+.curtain.open .curtain-half.top{transform:translateY(-101%)}
+.curtain.open .curtain-half.bottom{transform:translateY(101%)}
+.curtain.open .curtain-word{transform:translateY(-40px);opacity:0}
+.curtain.open .curtain-sub{transform:translateY(40px);opacity:0}
+.curtain.open .curtain-seam{opacity:0}
+.curtain.leaving .curtain-half{transition-duration:.8s}
+.curtain.leaving .curtain-seam,.curtain.leaving .curtain-shears{opacity:0}
+
+/* ---------- Progress seam ---------- */
+.thread{position:fixed;top:0;left:0;width:100%;height:14px;z-index:120;pointer-events:none}
+.thread::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,rgba(139,90,52,.28) 0 6px,transparent 6px 11px)}
+.thread-cut{position:absolute;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,var(--bourbon),var(--brass));transform-origin:left;transform:scaleX(0)}
+.thread-shears{position:absolute;top:-8px;left:0;width:34px}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:110;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);
+  transition:transform .7s var(--ease-out),background-color .5s,box-shadow .5s,height .5s var(--ease-out)}
+.nav.scrolled{--nav-h:68px;background:rgba(244,236,223,.86);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 var(--line)}
+.nav.hide{transform:translateY(-105%)}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo .script{font-size:2rem;color:var(--espresso)}
+.logo small{font:500 .56rem/1 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--bourbon);margin:4px 0 0 4px}
+.nav-links{display:flex;align-items:center;gap:clamp(20px,2.6vw,42px)}
+.nav-links a:not(.btn){position:relative;font:500 .7rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:8px 0}
+.nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--bourbon);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease-out)}
+.nav-links a:not(.btn):hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
+.nav-links a.active{color:var(--bourbon)}
+.nav .btn{padding:13px 24px}
+.menu-btn{display:none;align-items:center;gap:12px;font:500 .7rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:10px 0;position:relative;z-index:130}
+.menu-btn .bars{width:26px;height:10px;position:relative}
+.menu-btn .bars i{position:absolute;left:0;width:100%;height:1.5px;background:currentColor;transition:transform .6s var(--ease-out),top .6s var(--ease-out)}
+.menu-btn .bars i:first-child{top:0}
+.menu-btn .bars i:last-child{top:8.5px}
+.menu-open .menu-btn{color:var(--cream)}
+.menu-open .menu-btn .bars i:first-child{top:4px;transform:rotate(22deg)}
+.menu-open .menu-btn .bars i:last-child{top:4px;transform:rotate(-22deg)}
+.menu{position:fixed;inset:0;z-index:125;background:var(--espresso);color:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:100px var(--gutter) 40px;
+  clip-path:circle(0% at calc(100% - 48px) 42px);visibility:hidden;transition:clip-path 1s var(--ease-io),visibility 0s 1s}
+.menu-open .menu{clip-path:circle(150% at calc(100% - 48px) 42px);visibility:visible;transition:clip-path 1s var(--ease-io),visibility 0s}
+.menu ol{list-style:none;counter-reset:m}
+.menu li{overflow:hidden;border-bottom:1px solid rgba(244,236,223,.1)}
+.menu li a{display:flex;align-items:baseline;gap:18px;padding:14px 0;font:300 clamp(2.3rem,9vw,3.6rem)/1.05 var(--serif);transform:translateY(105%);transition:transform .9s var(--ease-out)}
+.menu li a::before{counter-increment:m;content:'0' counter(m);font:italic 400 1rem/1 var(--serif);color:var(--brass)}
+.menu-open .menu li a{transform:none}
+.menu-open .menu li:nth-child(1) a{transition-delay:.25s}
+.menu-open .menu li:nth-child(2) a{transition-delay:.31s}
+.menu-open .menu li:nth-child(3) a{transition-delay:.37s}
+.menu-open .menu li:nth-child(4) a{transition-delay:.43s}
+.menu-open .menu li:nth-child(5) a{transition-delay:.49s}
+.menu-open{overflow:hidden}
+.menu-open .nav{z-index:130;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;transform:none}
+.menu-open .logo .script{color:var(--cream)}
+.menu-open .logo small{color:var(--brass-lt)}
+
+/* ---------- Reveal system ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(46px);transition:opacity 1.2s var(--ease-out) var(--d,0s),transform 1.3s var(--ease-out) var(--d,0s)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal="lines"]{opacity:1;transform:none}
+.js [data-reveal="lines"] .line > span{transform:translateY(112%);transition:transform 1.3s var(--ease-out)}
+.js [data-reveal="lines"].in .line > span{transform:none}
+.js [data-reveal="lines"] .line:nth-child(2) > span{transition-delay:.1s}
+
+/* =====================================================================
+   CTA + FOOTER
+   ===================================================================== */
+.lk-cta{padding:clamp(100px,12vw,170px) var(--gutter);text-align:center;background:var(--linen)}
+.lk-cta .label{justify-content:center;margin-bottom:28px}
+.lk-cta .label::before{content:'';width:44px;height:1px;background:currentColor;opacity:.45}
+.lk-cta .lede{margin:26px auto 44px}
+.lk-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.footer{background:var(--cream-2);padding:clamp(60px,8vw,100px) var(--gutter) 34px}
+.footer-mark{font-size:clamp(2.6rem,10vw,9rem);line-height:.9;text-align:center;margin-bottom:40px;white-space:nowrap}
+.footer-mark span{color:var(--bourbon)}
+.footer-base{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line);font:400 .66rem/1.6 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.footer-base a:hover{color:var(--bourbon)}
+
+/* ---------- Cursor ---------- */
+.cursor{display:none}
+.has-cursor .cursor{display:block}
+.has-cursor,.has-cursor a,.has-cursor button{cursor:none}
+.cursor-dot,.cursor-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:2000;will-change:transform}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--bourbon);transition:opacity .3s,background .3s}
+.cursor-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1px solid rgba(139,90,52,.55);display:grid;place-items:center;color:var(--espresso);
+  transition:width .5s var(--ease-out),height .5s var(--ease-out),margin .5s var(--ease-out),background .4s,border-color .4s,opacity .3s}
+.cursor-ring .scissors{position:absolute;width:0;opacity:0;transition:width .4s var(--ease-out),opacity .3s;color:inherit}
+.cursor-ring .c-label{position:absolute;font:500 .6rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.cursor.is-link .cursor-ring{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(217,189,138,.18);border-color:var(--brass)}
+.cursor.is-link .cursor-ring .scissors{width:36px;opacity:1}
+.cursor.is-link .cursor-dot,.cursor.is-view .cursor-dot{opacity:0}
+.cursor.is-view .cursor-ring{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--cream);border-color:var(--cream)}
+.cursor.is-view .c-label{opacity:1}
+.cursor.on-dark .cursor-ring{border-color:rgba(244,236,223,.55);color:var(--cream)}
+.cursor.on-dark .cursor-dot{background:var(--cream)}
+.cursor.on-dark.is-view .cursor-ring{color:var(--espresso)}
+.cursor.is-hidden .cursor-ring,.cursor.is-hidden .cursor-dot{opacity:0}
+
+
+
+/* =====================================================================
+   HERO: the vanity mirror. Bulbs light up one by one and bring the
+   photo up from dim to bright, like switching on the station.
+   ===================================================================== */
+.ex-hero{
+  position:relative;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(36px,6vw,100px);
+  padding:calc(var(--nav-h) + 40px) var(--gutter) 80px;overflow:hidden;
+  background:radial-gradient(70% 60% at 80% 30%,rgba(217,189,138,.25),transparent 60%),repeating-linear-gradient(90deg,rgba(139,90,52,.04) 0 1px,transparent 1px 24px),var(--cream);
+}
+.ex-hero .label{margin-bottom:30px}
+.ex-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3.6rem,9vw,9rem);line-height:.9;letter-spacing:-.025em;margin-bottom:32px}
+.ex-hero h1 em{font-style:italic;font-weight:400;color:var(--bourbon)}
+.ex-hero h1 .line:nth-child(2){padding-left:.7em}
+.ex-hero .lede{margin-bottom:40px}
+.ex-actions{display:flex;flex-wrap:wrap;gap:14px}
+.js .ex-hero h1 .line > span{transform:translateY(112%);transition:transform 1.4s var(--ease-out)}
+.js .is-ready .ex-hero h1 .line > span{transform:none}
+.js .is-ready .ex-hero h1 .line:nth-child(2) > span{transition-delay:.15s}
+.js .ex-hero .label,.js .ex-hero .lede,.js .ex-actions{opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out)}
+.js .is-ready .ex-hero .label{opacity:1;transform:none;transition-delay:.1s}
+.js .is-ready .ex-hero .lede{opacity:1;transform:none;transition-delay:.5s}
+.js .is-ready .ex-actions{opacity:1;transform:none;transition-delay:.65s}
+
+.vanity{position:relative;justify-self:center;width:min(470px,100%);padding:44px 44px 0 0}
+.vanity-frame{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:6px;background:#1a1a1a;box-shadow:0 50px 100px -45px rgba(32,21,14,.6)}
+.vanity-frame img{width:100%;height:100%;object-fit:cover;object-position:40% 35%;filter:brightness(.35) contrast(1.05);transform:scale(1.08);transition:filter 2.4s var(--ease-out) 1.6s,transform 3s var(--ease-out) .4s}
+.is-ready .vanity-frame img{filter:brightness(1) contrast(1.05);transform:none}
+.bulbs{position:absolute;display:flex;justify-content:space-between;pointer-events:none}
+.bulbs-top{left:6%;right:44px;top:12px}
+.bulbs-side{flex-direction:column;top:70px;bottom:14%;right:12px}
+.bulb{width:18px;height:18px;border-radius:50%;background:#d9d2c4;box-shadow:inset 0 -2px 4px rgba(0,0,0,.15);transition:background .5s,box-shadow .8s}
+.is-ready .bulb{background:#FFF8E8;box-shadow:0 0 12px 4px rgba(255,236,200,.85),0 0 40px 10px rgba(255,220,160,.35);animation:bulbHum 4.5s ease-in-out infinite}
+@keyframes bulbHum{0%,100%{opacity:1}50%{opacity:.86}}
+.vanity-tag{position:absolute;left:-26px;bottom:34px;z-index:2;padding:14px 26px 16px;background:var(--linen);box-shadow:0 24px 50px -20px rgba(32,21,14,.35);transform:rotate(-4deg);text-align:center}
+.vanity-tag .script{display:block;font-size:2.3rem;line-height:1;color:var(--bourbon)}
+.vanity-tag small{font:500 .56rem/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+.js .vanity{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease-out) .3s,transform 1.4s var(--ease-out) .3s}
+.js .is-ready .vanity{opacity:1;transform:none}
+
+/* =====================================================================
+   THE VISIT: five steps. The photo holds still while the steps scroll
+   past, and each new step cuts to its photo with a brass glint.
+   ===================================================================== */
+.jr{position:relative;background:var(--cream-2);padding:clamp(90px,11vw,160px) var(--gutter) clamp(60px,8vw,120px)}
+.jr-head{max-width:760px;margin-bottom:clamp(40px,6vw,80px)}
+.jr-head .label{margin-bottom:26px}
+.jr-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);align-items:start}
+.jr-media{position:sticky;top:calc(var(--nav-h) + 30px);display:flex;flex-direction:column;align-items:center;gap:26px}
+.jr-frame{position:relative;width:min(100%,440px);aspect-ratio:3/4;border-radius:999px 999px 4px 4px;overflow:hidden;background:var(--espresso-2);box-shadow:0 50px 100px -45px rgba(32,21,14,.55)}
+.jr-frame img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;will-change:clip-path,transform}
+.jr-glint{position:absolute;top:-6%;height:112%;width:2px;margin-left:-1px;left:-10%;z-index:3;opacity:0;pointer-events:none;background:linear-gradient(transparent,#FFF4DA 25%,#FFF4DA 75%,transparent);box-shadow:0 0 22px 6px rgba(255,236,200,.55)}
+.jr-rail{display:flex;align-items:center;gap:16px;font:500 .66rem/1 var(--sans);letter-spacing:.28em;color:var(--muted)}
+.jr-rail b{color:var(--ink);font-weight:500}
+.jr-ticks{display:flex;gap:6px}
+.jr-ticks i{width:28px;height:2px;background:var(--line);transition:background .5s}
+.jr-ticks i.on{background:var(--bourbon)}
+.jr-steps{list-style:none}
+.jr-step{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0;opacity:.22;transition:opacity .8s var(--ease-out)}
+.jr-step.active{opacity:1}
+.jr-step:first-child{min-height:62vh;justify-content:flex-start;padding-top:8vh}
+.jr-step:last-child{min-height:70vh}
+.jr-num{font:300 clamp(4rem,8vw,7rem)/.85 var(--sans);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px var(--brass);margin-bottom:18px}
+.jr-step h3{font:300 clamp(2.2rem,4vw,3.6rem)/1 var(--serif);margin-bottom:20px}
+.jr-step h3 em{font-style:italic;color:var(--bourbon)}
+.jr-step p{color:var(--muted);max-width:30rem;margin-bottom:22px}
+.jr-tag{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:10px 18px;border-radius:999px;border:1px solid var(--line);font:500 .6rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--bourbon)}
+.jr-tag .scissors{width:26px;--open:16}
+.jr-mobile-img{display:none}
+
+/* =====================================================================
+   THE LITTLE LUXURIES
+   ===================================================================== */
+.lux{padding:clamp(90px,11vw,160px) var(--gutter);background:var(--linen)}
+.lux-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,80px)}
+.lux-head .label{margin-bottom:24px}
+.lux-head .lede{max-width:24rem}
+.lux-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.lux-item{position:relative;background:var(--linen);padding:clamp(28px,3vw,44px) clamp(22px,2.4vw,36px) 40px;overflow:hidden;transition:background .6s}
+.lux-item::before{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:linear-gradient(90deg,var(--bourbon),var(--brass));transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease-out)}
+.lux-item:hover{background:#fff}
+.lux-item:hover::before{transform:scaleX(1)}
+.lux-item .ico{width:58px;height:58px;color:var(--bourbon);margin-bottom:28px;transition:transform .8s var(--ease-out)}
+.lux-item:hover .ico{transform:translateY(-6px) rotate(-4deg)}
+.ico *{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.js .ico *{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2s var(--ease-out) calc(var(--d,0s) + .3s)}
+.js .in .ico *{stroke-dashoffset:0}
+.lux-item h3{font:400 1.55rem/1.1 var(--serif);margin-bottom:10px}
+.lux-item p{font-size:.9rem;color:var(--muted)}
+
+/* =====================================================================
+   BOOKING GUIDELINES (accordion; the shears open with each panel)
+   ===================================================================== */
+.gl{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,7vw,120px);padding:clamp(90px,11vw,160px) var(--gutter);background:var(--cream)}
+.gl-intro .label{margin-bottom:24px}
+.gl-intro .display{font-size:clamp(2.4rem,4.4vw,3.8rem);margin-bottom:22px}
+.gl-intro p{color:var(--muted);max-width:24rem}
+.acc{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;text-align:left;font:400 clamp(1.35rem,2.2vw,1.75rem)/1.2 var(--serif);transition:color .4s,padding .6s var(--ease-out)}
+.acc-btn:hover{color:var(--bourbon);padding-left:10px}
+.acc-btn .scissors{width:46px;flex-shrink:0;--open:0;transform:rotate(90deg);transition:transform .7s var(--ease-out)}
+.acc-item.open .acc-btn .scissors{--open:24;transform:rotate(0deg)}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--ease-out)}
+.acc-item.open .acc-panel{grid-template-rows:1fr}
+.acc-panel > div{overflow:hidden}
+.acc-panel p{padding:0 70px 30px 0;color:var(--muted)}
+
+/* =====================================================================
+   NOW BOOKING: the newspaper flatlay, with a little disco-ball sparkle
+   ===================================================================== */
+.nb{position:relative;display:grid;grid-template-columns:1fr .9fr;gap:clamp(40px,7vw,120px);align-items:center;padding:clamp(90px,11vw,160px) var(--gutter);overflow:hidden;color:var(--cream);
+  background:radial-gradient(60% 70% at 75% 40%,rgba(176,138,79,.22),transparent 70%),repeating-linear-gradient(90deg,rgba(217,189,138,.035) 0 1px,transparent 1px 26px),var(--espresso)}
+.nb-photo{position:relative;justify-self:center;width:min(430px,100%);will-change:transform}
+.nb-print{position:relative;padding:12px 12px 14px;background:#fff;transform:rotate(3deg);box-shadow:0 60px 110px -40px rgba(0,0,0,.8);transition:transform 1s var(--ease-out)}
+.nb-print:hover{transform:rotate(1deg) scale(1.02)}
+.nb-print img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.nb-sparkles{position:absolute;inset:12px 12px 14px;pointer-events:none;overflow:hidden}
+.nb-sparkles i{position:absolute;width:var(--sz);height:var(--sz);opacity:0;animation:twinkle var(--t) ease-in-out var(--dl) infinite;
+  background:radial-gradient(circle,#fff 0,rgba(255,255,255,.9) 18%,transparent 60%);
+  clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}45%,55%{opacity:1;transform:scale(1) rotate(45deg)}}
+.nb-inner{position:relative;max-width:560px}
+.nb .label{color:var(--brass-lt);margin-bottom:26px}
+.nb .display{font-size:clamp(3rem,7vw,6.6rem);margin-bottom:26px}
+.nb .display em{color:var(--brass-lt)}
+.nb p{color:rgba(244,236,223,.78);margin-bottom:40px;max-width:28rem}
+.nb-actions{display:flex;gap:14px;flex-wrap:wrap}
+.nb .btn{border-color:rgba(244,236,223,.5);color:var(--cream)}
+.nb .btn::before{background:var(--cream)}
+.nb .btn:hover{color:var(--espresso)}
+.nb .btn-solid{background:var(--brass);border-color:var(--brass);color:var(--espresso)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){.lux-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  :root{--nav-h:72px}
+  .nav-links{display:none}
+  .menu-btn{display:inline-flex}
+  .ex-hero{grid-template-columns:1fr;gap:60px}
+  .vanity{width:min(400px,88%);padding:34px 34px 0 0}
+  .bulb{width:14px;height:14px}
+  .bulbs-top{right:34px;top:10px}
+  .bulbs-side{right:10px;top:56px}
+  .vanity-tag{left:-14px}
+  /* phones: each step carries its own photo, wiped in as you reach it */
+  .jr-body{grid-template-columns:1fr;gap:0}
+  .jr-media{display:none}
+  .jr-step,.jr-step:first-child,.jr-step:last-child{min-height:0;opacity:1;padding:0 0 64px}
+  .jr-mobile-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 4px 4px;margin-bottom:26px;
+    clip-path:inset(100% 0 0 0 round 999px 999px 4px 4px);transition:clip-path 1.3s var(--ease-io)}
+  .jr-step.seen .jr-mobile-img{clip-path:inset(0 0 0 0 round 999px 999px 4px 4px)}
+  .reduce-motion .jr-mobile-img{clip-path:none}
+  .gl{grid-template-columns:1fr}
+  .nb{grid-template-columns:1fr}
+  .nb-photo{width:min(340px,82%)}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .logo .script{font-size:1.7rem}
+  .ex-actions .btn,.nb-actions .btn{flex:1 1 auto;justify-content:center}
+  /* luxuries as a compact 2x2 instead of four tall cards */
+  .lux-grid{grid-template-columns:repeat(2,1fr)}
+  .lux-item{padding:22px 16px 26px}
+  .lux-item .ico{width:42px;height:42px;margin-bottom:16px}
+  .lux-item h3{font-size:1.2rem}
+  .lux-item p{font-size:.8rem;line-height:1.55}
+  .nb-photo{width:min(260px,72%)}
+  .jr-step,.jr-step:first-child,.jr-step:last-child{padding-bottom:48px}
+  .acc-panel p{padding-right:0}
+  .footer-base{justify-content:center;text-align:center}
+}
+
+/* ---------- Touch & small-phone polish ---------- */
+@media (max-width:900px){
+  .menu-btn{padding:14px 0 14px 10px}
+  .footer-base a{display:inline-block;padding:12px 4px}
+}
+/* ---------- Reduced motion ---------- */
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+.reduce-motion .curtain.open{opacity:0}
+.reduce-motion [data-reveal]{opacity:1!important;transform:none!important}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="brassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E2B8"/><stop offset=".45" stop-color="#C9A365"/><stop offset="1" stop-color="#8A6433"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain-half top"><span class="curtain-word">The Experience</span></div>
+  <div class="curtain-half bottom"><span class="curtain-sub">Hair by Hayden &middot; Murfreesboro, TN</span></div>
+  <div class="curtain-seam"></div>
+  <div class="curtain-shears scissors" data-scissors></div>
+</div>
+
+<div class="thread" aria-hidden="true"><div class="thread-cut"></div><div class="thread-shears scissors" data-scissors></div></div>
+
+<div class="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><span class="scissors" data-scissors></span><span class="c-label">View</span></div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="index2.html" class="logo" data-transition aria-label="Hair by Hayden, home">
+    <span class="script">Hair by Hayden</span>
+    <small>Hair Stylist</small>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index2.html#meet" data-transition>Meet Hayden</a>
+    <a href="index2.html#menu" data-transition>Menu</a>
+    <a href="lookbook2.html" data-transition>Lookbook</a>
+    <a href="experience2.html" class="active" aria-current="page">Experience</a>
+    <a class="btn" href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener" data-magnetic>Book</a>
+  </nav>
+  <button class="menu-btn" aria-expanded="false" aria-controls="site-menu">
+    <span class="menu-btn-label">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span>
+  </button>
+</header>
+
+<div class="menu" id="site-menu" aria-label="Site menu">
+  <ol>
+    <li><a href="index2.html" data-transition>Home</a></li>
+    <li><a href="index2.html#meet" data-transition>Meet Hayden</a></li>
+    <li><a href="lookbook2.html" data-transition>The Lookbook</a></li>
+    <li><a href="#visit">Your Visit</a></li>
+    <li><a href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener">Reserve</a></li>
+  </ol>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="ex-hero">
+    <div>
+      <p class="label"><span class="num">&#8470;5</span> The Experience</p>
+      <h1>
+        <span class="line"><span>Behind the</span></span>
+        <span class="line"><span><em>chair.</em></span></span>
+      </h1>
+      <p class="lede">Southern hospitality meets modern luxury. Here&rsquo;s what to expect in Hayden&rsquo;s chair at The Look Beauty Bar, from the first sip to the final look in the mirror.</p>
+      <div class="ex-actions">
+        <a class="btn btn-solid" href="#visit" data-magnetic>
+          Walk through a visit
+          <svg class="arrow" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 5h17M13 1l4 4-4 4"/></svg>
+        </a>
+        <a class="btn" href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener" data-magnetic>Book online</a>
+      </div>
+    </div>
+
+    <div class="vanity">
+      <div class="bulbs bulbs-top" aria-hidden="true"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+      <div class="bulbs bulbs-side" aria-hidden="true"><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i></div>
+      <div class="vanity-frame">
+        <!-- PHOTO: Hero, the vanity mirror (black and white works beautifully as the bulbs "switch on").
+             Swap src + alt to change; adjust object-position in .vanity-frame img to re-frame. -->
+        <img src="hayden_mirror.jpg" alt="Hayden fixing her hair in a vanity mirror lined with bulbs" fetchpriority="high">
+      </div>
+      <p class="vanity-tag"><span class="script">Your seat</span><small>is saved</small></p>
+    </div>
+  </section>
+
+  <!-- ============ THE VISIT ============ -->
+  <section class="jr" id="visit">
+    <div class="jr-head">
+      <p class="label" data-reveal><span class="num">01</span> Your Visit</p>
+      <h2 class="display" data-reveal="lines">
+        <span class="line"><span>From hello to</span></span>
+        <span class="line"><span><em>the mirror.</em></span></span>
+      </h2>
+    </div>
+
+    <div class="jr-body">
+      <div class="jr-media">
+        <div class="jr-frame">
+          <!-- PHOTOS for the five steps live on each step below (data-img). These two <img> tags are
+               just the stage the photos are shown on, so there's nothing to edit here. -->
+          <img alt="">
+          <img alt="">
+          <span class="jr-glint" aria-hidden="true"></span>
+        </div>
+        <div class="jr-rail" aria-hidden="true"><span class="jr-count"><b>01</b> / 05</span><span class="jr-ticks"></span></div>
+      </div>
+
+      <!-- STEPS: each <li> is one step. data-img is its photo and data-alt describes it.
+           Add, remove or reorder steps freely; the counter and ticks follow along. -->
+      <ol class="jr-steps">
+        <li class="jr-step" data-img="hayden_brush.jpg" data-alt="Hayden smiling in a denim jacket, holding a hairbrush">
+          <span class="jr-num" aria-hidden="true">01</span>
+          <h3>Pull up <em>a chair.</em></h3>
+          <p>You&rsquo;ll be greeted by name and offered something to sip: coffee, Southern sweet tea or a seasonal mimosa. Get comfortable. This is your time.</p>
+          <span class="jr-tag"><span class="scissors" data-scissors></span>Complimentary sips &amp; snacks</span>
+        </li>
+        <li class="jr-step" data-img="Hayden_reading.jpg" data-alt="Hayden in an armchair flipping through a color swatch book">
+          <span class="jr-num" aria-hidden="true">02</span>
+          <h3>Talk it <em>through.</em></h3>
+          <p>Every service starts with a real conversation about your hair history, your routine and the look you&rsquo;re dreaming of. Extensions and big blonding changes begin with a short consultation before booking.</p>
+          <span class="jr-tag"><span class="scissors" data-scissors></span>Consultation first</span>
+        </li>
+        <li class="jr-step" data-img="hayden_pour.jpg" data-alt="A glossing treatment being poured into a ribbed coupe glass">
+          <span class="jr-num" aria-hidden="true">03</span>
+          <h3>The <em>mix.</em></h3>
+          <p>Color is mixed for you and only you, never one-size-fits-all. Dimensional lived-in blonde, a root refresh or a glassy gloss, it&rsquo;s tailored to your tone.</p>
+          <span class="jr-tag"><span class="scissors" data-scissors></span>Custom color &amp; gloss</span>
+        </li>
+        <li class="jr-step" data-img="hayden_spray.jpg" data-alt="A hand misting anti-humidity spray against a warm wood wall">
+          <span class="jr-num" aria-hidden="true">04</span>
+          <h3>The <em>finish.</em></h3>
+          <p>Cut, styled and set with a blowout made to last, sealed with anti-humidity spray, because Tennessee summers don&rsquo;t play.</p>
+          <span class="jr-tag"><span class="scissors" data-scissors></span>Humidity-proofed</span>
+        </li>
+        <li class="jr-step" data-img="Hayden_smile.jpg" data-alt="Hayden laughing at her reflection in a bulb-lit vanity mirror">
+          <span class="jr-num" aria-hidden="true">05</span>
+          <h3>The <em>reveal.</em></h3>
+          <p>That first look in the mirror is Hayden&rsquo;s favorite part. You&rsquo;ll leave with the look and the know-how to keep it seamless for weeks.</p>
+          <span class="jr-tag"><span class="scissors" data-scissors></span>Take-home tips</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ THE LITTLE LUXURIES ============ -->
+  <section class="lux">
+    <div class="lux-head">
+      <div>
+        <p class="label" data-reveal><span class="num">02</span> The Little Luxuries</p>
+        <h2 class="display" data-reveal="lines"><span class="line"><span>Poured <em>generously.</em></span></span></h2>
+      </div>
+      <p class="lede" data-reveal>Settle in and let Southern hospitality do its thing. These are waiting at your chair.</p>
+    </div>
+    <div class="lux-grid">
+      <article class="lux-item" data-reveal>
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
+          <path pathLength="1" d="M14 24h30v14a15 15 0 0 1-15 15h0a15 15 0 0 1-15-15z"/>
+          <path pathLength="1" d="M44 28h4a6 6 0 0 1 0 12h-5"/>
+          <path pathLength="1" d="M10 58h38"/>
+          <path pathLength="1" d="M22 8c-3 4 3 6 0 10M30 6c-3 4 3 6 0 10"/>
+        </svg>
+        <h3>High-end Coffee</h3>
+        <p>Something warm and good for the start of your appointment.</p>
+      </article>
+      <article class="lux-item" data-reveal style="--d:.1s">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
+          <path pathLength="1" d="M17 16h30l-4.2 38.4A4 4 0 0 1 38.8 58H25.2a4 4 0 0 1-4-3.6z"/>
+          <path pathLength="1" d="M19.4 30h25.2"/>
+          <path pathLength="1" d="M38 4l-7 30"/>
+          <circle pathLength="1" cx="46" cy="16" r="7"/>
+          <path pathLength="1" d="M46 9v14M39 16h14"/>
+        </svg>
+        <h3>Southern Sweet Tea</h3>
+        <p>Poured over ice, the way it ought to be.</p>
+      </article>
+      <article class="lux-item" data-reveal style="--d:.2s">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
+          <path pathLength="1" d="M12 14h40c0 12-9 20-20 20S12 26 12 14z"/>
+          <path pathLength="1" d="M32 34v18"/>
+          <path pathLength="1" d="M22 56h20"/>
+          <circle pathLength="1" cx="26" cy="22" r="1.5"/>
+          <circle pathLength="1" cx="36" cy="25" r="1.2"/>
+          <circle pathLength="1" cx="31" cy="18" r="1"/>
+        </svg>
+        <h3>Seasonal Mimosas</h3>
+        <p>A little something bubbly when the occasion calls for it.</p>
+      </article>
+      <article class="lux-item" data-reveal style="--d:.3s">
+        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true">
+          <ellipse pathLength="1" cx="32" cy="40" rx="24" ry="8"/>
+          <path pathLength="1" d="M8 40c0 6 11 10 24 10s24-4 24-10"/>
+          <circle pathLength="1" cx="24" cy="32" r="5"/>
+          <circle pathLength="1" cx="36" cy="30" r="5"/>
+          <circle pathLength="1" cx="44" cy="35" r="4"/>
+        </svg>
+        <h3>Curated Snacks</h3>
+        <p>Because nobody should sit through a color service hungry.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING GUIDELINES ============ -->
+  <section class="gl">
+    <div class="gl-intro">
+      <p class="label" data-reveal><span class="num">03</span> Guidelines</p>
+      <h2 class="display" data-reveal="lines"><span class="line"><span>A few kind</span></span><span class="line"><span><em>requests.</em></span></span></h2>
+      <p data-reveal>They keep every appointment calm, on time and entirely about you.</p>
+    </div>
+    <div class="acc" data-reveal>
+      <div class="acc-item open">
+        <button class="acc-btn" aria-expanded="true" aria-controls="acc-1" id="acc-b1">New Guest Consultations <span class="scissors" data-scissors aria-hidden="true"></span></button>
+        <div class="acc-panel" id="acc-1" role="region" aria-labelledby="acc-b1"><div><p>All extensions and heavy custom blonding services require a brief digital consultation form before booking. This makes sure the exact time your hair deserves is set aside.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="acc-2" id="acc-b2">Cancellation Policy <span class="scissors" data-scissors aria-hidden="true"></span></button>
+        <div class="acc-panel" id="acc-2" role="region" aria-labelledby="acc-b2"><div><p>Your appointment time is reserved just for you. Please give at least 48 hours&rsquo; notice for any cancellation or reschedule.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="acc-3" id="acc-b3">Late Arrivals <span class="scissors" data-scissors aria-hidden="true"></span></button>
+        <div class="acc-panel" id="acc-3" role="region" aria-labelledby="acc-b3"><div><p>To protect the focus of every guest&rsquo;s appointment, arrivals more than 15 minutes late may need to reschedule or adjust their service.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="acc-4" id="acc-b4">The Vibe <span class="scissors" data-scissors aria-hidden="true"></span></button>
+        <div class="acc-panel" id="acc-4" role="region" aria-labelledby="acc-b4"><div><p>Relax, unwind and settle in. Coffee, sweet tea, seasonal mimosas and curated snacks are always waiting at your chair.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOW BOOKING ============ -->
+  <section class="nb" data-dark>
+    <div class="nb-inner">
+      <p class="label" data-reveal>Now Booking</p>
+      <h2 class="display" data-reveal="lines"><span class="line"><span>Your chair is</span></span><span class="line"><span><em>waiting.</em></span></span></h2>
+      <p data-reveal>Hayden is welcoming new and returning guests at The Look Beauty Bar in Murfreesboro, Tennessee.</p>
+      <div class="nb-actions" data-reveal>
+        <a class="btn btn-solid" href="https://hair-by-hayden.square.site/" target="_blank" rel="noopener" data-magnetic>
+          Reserve a Chair
+          <svg class="arrow" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 5h17M13 1l4 4-4 4"/></svg>
+        </a>
+        <a class="btn" href="lookbook2.html" data-transition data-magnetic>See the Lookbook</a>
+      </div>
+    </div>
+    <div class="nb-photo" data-reveal>
+      <div class="nb-print">
+        <!-- PHOTO: "Now Booking" flatlay, shown as a tilted print. Swap src + alt to change.
+             The twinkles are placed over the disco ball (top right); see "sparkles" in the script. -->
+        <img src="now_booking_flatlay.jpg" alt="A newspaper painted with the words Now Booking, surrounded by a disco ball, color bowl, brush and extension samples" loading="lazy">
+        <div class="nb-sparkles" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer-mark script">Hair by <span>Hayden</span></p>
+  <div class="footer-base">
+    <span>&copy; <span id="year">2026</span> Hair by Hayden &middot; The Look Beauty Bar, Murfreesboro TN</span>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const pad = n => String(n).padStart(2, '0');
+  const root = document.documentElement, body = document.body;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (reduce) root.classList.add('reduce-motion');
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---------- Shears ---------- */
+  const SHEARS = '<svg class="scissors-svg" viewBox="0 0 120 60" aria-hidden="true" focusable="false">' +
+    '<g class="blade blade-a"><path class="edge" d="M50 31.5C72 27.5 96 27 118 30C96 30.5 74 32 50 34Z"/><path class="arm" d="M31.5 19.5Q44 25 53 30"/><circle class="ring" cx="22" cy="15" r="10"/></g>' +
+    '<g class="blade blade-b"><path class="edge" d="M50 28.5C72 32.5 96 33 118 30C96 29.5 74 28 50 26Z"/><path class="arm" d="M31.5 40.5Q44 35 53 30"/><circle class="ring" cx="22" cy="45" r="10"/></g>' +
+    '<circle class="pivot" cx="53" cy="30" r="2.6"/></svg>';
+  $$('[data-scissors]').forEach(el => { el.innerHTML = SHEARS; });
+
+  /* ---------- Vanity bulbs switch on one after another ---------- */
+  $$('.bulb').forEach((b, i) => { b.style.transitionDelay = (0.7 + i * 0.12) + 's'; b.style.animationDelay = (i * 0.37) + 's'; });
+
+  /* ---------- Curtain in / out ---------- */
+  const curtain = $('#curtain');
+  let seen = false;
+  try { seen = sessionStorage.getItem('hbh-experience-seen') === '1'; sessionStorage.setItem('hbh-experience-seen', '1'); } catch (e) {}
+  const ready = () => body.classList.add('is-ready');
+  const openCurtain = () => {
+    if (reduce) { curtain.classList.add('open', 'done'); ready(); return; }
+    const run = seen ? 650 : 1100;
+    curtain.style.setProperty('--run', run + 'ms');
+    $('.curtain-shears').classList.add('snipping');
+    curtain.classList.add('cutting');
+    setTimeout(() => { curtain.classList.add('open'); ready(); }, run - 60);
+    setTimeout(() => curtain.classList.add('done'), run + 1200);
+  };
+  Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise(r => setTimeout(r, 2000))])
+    .then(() => setTimeout(openCurtain, seen ? 40 : 250));
+  const leaveTo = href => {
+    if (reduce) { location.href = href; return; }
+    curtain.classList.remove('done', 'cutting');
+    curtain.classList.add('leaving');
+    void curtain.offsetWidth;
+    curtain.classList.remove('open');
+    setTimeout(() => { location.href = href; }, 820);
+  };
+  $$('a[data-transition]').forEach(a => a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault(); leaveTo(a.getAttribute('href'));
+  }));
+  addEventListener('pageshow', e => { if (e.persisted) { curtain.classList.remove('leaving'); curtain.classList.add('open', 'done'); ready(); } });
+
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = $('.menu-btn');
+  const setMenu = open => {
+    root.classList.toggle('menu-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    $('.menu-btn-label').textContent = open ? 'Close' : 'Menu';
+  };
+  menuBtn.addEventListener('click', () => setMenu(!root.classList.contains('menu-open')));
+  $$('.menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* ---------- Reveal on enter ---------- */
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { rootMargin: '0px 0px -10% 0px', threshold: .01 });
+    $$('[data-reveal]').forEach(el => io.observe(el));
+  } else $$('[data-reveal]').forEach(el => el.classList.add('in'));
+
+  /* ==================================================================
+     THE VISIT: whichever step crosses the middle of the screen becomes
+     active, and its photo cuts in diagonally with a brass glint.
+     ================================================================== */
+  const steps = $$('.jr-step');
+  const layers = $$('.jr-frame img');
+  const glint = $('.jr-glint');
+  const frame = $('.jr-frame');
+  $('.jr-ticks').innerHTML = steps.map(() => '<i></i>').join('');
+  const ticks = $$('.jr-ticks i');
+  let cur = -1, front = 0, busy = false, queued = null;
+  steps.forEach(s => { const im = new Image(); im.src = s.dataset.img; });   // warm the cache so cuts never flash
+  // phone layout: every step gets its own copy of its photo (hidden on desktop by CSS)
+  steps.forEach(s => s.insertAdjacentHTML('afterbegin', `<img class="jr-mobile-img" src="${s.dataset.img}" alt="${(s.dataset.alt || '').replace(/"/g, '&quot;')}" loading="lazy">`));
+  if ('IntersectionObserver' in window && !reduce) {
+    const mio = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('seen'); mio.unobserve(en.target); }
+    }), { rootMargin: '0px 0px -15% 0px' });
+    steps.forEach(s => mio.observe(s));
+  } else steps.forEach(s => s.classList.add('seen'));
+
+  const setStep = i => {
+    if (i === cur) return;
+    if (busy) { queued = i; return; }
+    const dir = i > cur ? 1 : -1;
+    const first = cur < 0;
+    cur = i;
+    steps.forEach((s, k) => s.classList.toggle('active', k === i));
+    ticks.forEach((t, k) => t.classList.toggle('on', k <= i));
+    $('.jr-count').innerHTML = `<b>${pad(i + 1)}</b> / ${pad(steps.length)}`;
+
+    const inc = layers[1 - front], out = layers[front];
+    inc.src = steps[i].dataset.img;
+    inc.alt = steps[i].dataset.alt || '';
+    inc.style.zIndex = 2; out.style.zIndex = 1; inc.style.opacity = 1;
+    if (first || reduce || !inc.animate) {
+      out.style.opacity = 0; inc.style.clipPath = 'none'; front = 1 - front;
+      return;
+    }
+    busy = true;
+    const ease = 'cubic-bezier(.76,0,.24,1)', D = 950;
+    const from = dir > 0 ? 'polygon(115% 0%, 100% 0%, 100% 100%, 100% 100%)' : 'polygon(0% 0%, 0% 0%, -15% 100%, 0% 100%)';
+    const to   = dir > 0 ? 'polygon(0% 0%, 100% 0%, 100% 100%, -15% 100%)' : 'polygon(0% 0%, 115% 0%, 100% 100%, 0% 100%)';
+    inc.animate([{ clipPath: from, transform: 'scale(1.16)' }, { clipPath: to, transform: 'scale(1)' }], { duration: D, easing: ease });
+    out.animate([{ transform: 'scale(1)', filter: 'brightness(1)' }, { transform: 'scale(1.08)', filter: 'brightness(.5)' }], { duration: D, easing: ease });
+    const r = frame.getBoundingClientRect();
+    const tilt = Math.atan2(.15 * r.width, r.height) * 180 / Math.PI;
+    glint.animate([
+      { left: dir > 0 ? '107.5%' : '-7.5%', opacity: 0, transform: `rotate(${tilt}deg)` },
+      { opacity: 1, offset: .15 }, { opacity: 1, offset: .85 },
+      { left: dir > 0 ? '-7.5%' : '107.5%', opacity: 0, transform: `rotate(${tilt}deg)` }
+    ], { duration: D, easing: ease });
+    setTimeout(() => {
+      out.style.opacity = 0; inc.style.clipPath = 'none'; front = 1 - front; busy = false;
+      if (queued !== null) { const q = queued; queued = null; setStep(q); }
+    }, D + 20);
+  };
+  setStep(0);
+  if ('IntersectionObserver' in window) {
+    const sio = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) setStep(steps.indexOf(en.target));
+    }), { rootMargin: '-55% 0px -40% 0px' });
+    steps.forEach(s => sio.observe(s));
+  }
+
+  /* ---------- Guidelines accordion ---------- */
+  $$('.acc-btn').forEach(btn => btn.addEventListener('click', () => {
+    const item = btn.closest('.acc-item');
+    const open = !item.classList.contains('open');
+    item.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  }));
+
+  /* ---------- Disco-ball sparkles over the Now Booking photo ---------- */
+  const sp = $('.nb-sparkles');
+  if (!reduce) {
+    let html = '';
+    for (let i = 0; i < 18; i++) {
+      // clustered toward the top-right, where the disco ball sits in the photo
+      const x = 58 + Math.random() * 42, y = Math.random() * 30;
+      html += `<i style="left:${x.toFixed(1)}%;top:${y.toFixed(1)}%;--sz:${(8 + Math.random() * 18).toFixed(0)}px;--t:${(2.2 + Math.random() * 2.6).toFixed(2)}s;--dl:${(Math.random() * 4).toFixed(2)}s"></i>`;
+    }
+    sp.innerHTML = html;
+  }
+
+  /* ==================================================================
+     Page loop: progress seam, nav, cursor, Now Booking parallax
+     ================================================================== */
+  const nav = $('#nav'), threadCut = $('.thread-cut'), threadShears = $('.thread-shears');
+  const nb = $('.nb'), nbBg = $('.nb-photo');
+  let lastY = -1, snipT = 0, last = performance.now();
+  const cursor = $('.cursor'), cDot = $('.cursor-dot'), cRing = $('.cursor-ring');
+  let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+
+  if (finePointer) {
+    root.classList.add('has-cursor');
+    addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cDot.style.transform = `translate3d(${mx}px,${my}px,0)`;
+      cursor.classList.remove('is-hidden');
+      const t = e.target;
+      const link = t.closest('a, button');
+      cursor.classList.toggle('is-link', !!link);
+      cursor.classList.toggle('on-dark', !!t.closest('[data-dark], .menu'));
+      $('.scissors', cRing).classList.toggle('snipping', !!link);
+    }, { passive: true });
+    document.addEventListener('mouseleave', () => cursor.classList.add('is-hidden'));
+    if (!reduce) $$('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .28}px, ${(e.clientY - r.top - r.height / 2) * .36}px)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  const loop = now => {
+    const dt = Math.min(64, now - last); last = now;
+    const y = scrollY;
+    if (y !== lastY) {
+      const vh = innerHeight, docH = root.scrollHeight - vh;
+      const p = docH > 0 ? clamp(y / docH) : 0;
+      threadCut.style.transform = `scaleX(${p})`;
+      threadShears.style.transform = `translateX(${p * innerWidth - 30}px)`;
+      if (!reduce) { threadShears.classList.add('snipping'); snipT = now; }
+      const d = y - (lastY < 0 ? y : lastY);
+      nav.classList.toggle('scrolled', y > 30);
+      if (!root.classList.contains('menu-open')) {
+        if (d > 4 && y > vh * .5) nav.classList.add('hide');
+        else if (d < -4 || y < vh * .5) nav.classList.remove('hide');
+      }
+      if (!reduce) {
+        const r = nb.getBoundingClientRect();
+        if (r.top < vh && r.bottom > 0) {
+          const q = (r.top + r.height / 2 - vh / 2) / vh;
+          nbBg.style.translate = `0 ${(q * -50).toFixed(1)}px`;
+        }
+      }
+      lastY = y;
+    }
+    if (now - snipT > 160) threadShears.classList.remove('snipping');
+    if (finePointer) {
+      const k = reduce ? 1 : 1 - Math.pow(.8, dt / 16.67);
+      rx += (mx - rx) * k; ry += (my - ry) * k;
+      cRing.style.transform = `translate3d(${rx.toFixed(1)}px,${ry.toFixed(1)}px,0)`;
+    }
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
